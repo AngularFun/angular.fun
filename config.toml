@@ -5,3 +5,4 @@ theme = "pixyll"
 contentDir = "content"
 layoutDir = "layouts"
 enableEmoji = true
+publishDir = "docs"
