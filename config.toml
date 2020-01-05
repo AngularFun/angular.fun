@@ -1,0 +1,7 @@
+baseURL = "https://angular.fun"
+languageCode = "en-us"
+title = "Angular Fun"
+theme = "pixyll"
+contentDir = "content"
+layoutDir = "layouts"
+enableEmoji = true

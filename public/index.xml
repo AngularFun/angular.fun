@@ -1,0 +1,22 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Angular Fun on Angular Fun </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://angular.fun/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Sun, 05 Jan 2020 21:38:47 MSK</updated>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://angular.fun/post/hello-world/</link>
+      <pubDate>Sun, 05 Jan 2020 21:38:47 MSK</pubDate>
+      
+      <guid>https://angular.fun/post/hello-world/</guid>
+      <description>Hi!</description>
+    </item>
+    
+  </channel>
+</rss>
+
