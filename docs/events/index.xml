@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on Angular Fun</title>
+    <link>https://angular.fun/events/</link>
+    <description>Recent content in Events on Angular Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://angular.fun/events/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ngAtlanta</title>
+      <link>https://angular.fun/events/2020-ng-atlanta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020-ng-atlanta/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
