@@ -4,6 +4,9 @@ other = "About"
 [contact]
 other = "Contact"
 
+[events]
+other = "Events"
+
 [tags]
 other = "Tags"
 

@@ -4,6 +4,9 @@ other = "О нас"
 [contact]
 other = "Контакты"
 
+[events]
+other = "Events"
+
 [tags]
 other = "Теги"
 
