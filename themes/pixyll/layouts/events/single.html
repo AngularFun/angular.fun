@@ -4,9 +4,16 @@
   <div class="post p2 p-responsive wrap" role="main">
     <div class="measure">
       <div class="post-header mb2">
-        <h1 class="py2">{{ .Title }}</h1>
+        <h1>{{ .Title }}</h1>
         {{ $baseurl := .Site.BaseURL }}
-        {{ .Params.textDate }}
+        <h4>
+          {{ .Params.textDate }}
+        </h4>
+
+        <p>
+          {{ .Params.country }}, {{ .Params.city }}
+        </p>
+
         <p>
           <a href="https://twitter.com/{{ .Params.twitter }}">{{ .Params.twitter }}</a>
         </p>
