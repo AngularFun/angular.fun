@@ -1,0 +1,12 @@
+.event-post {
+    margin-bottom: 40px;
+}
+
+.event-post .post-author {
+    margin: 0;
+}
+
+.event-post .event-title {
+    display: flex;
+    justify-content: space-between;
+}
