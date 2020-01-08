@@ -6,7 +6,7 @@ textDate: "Late May, Early June, 2020"
 eventType: "conference"
 site: "https://ngvikings.org"
 twitter: "@ngVikingsConf"
-country: "🇳🇴 NORWAY"
+country: "🇳🇴 Norway"
 city: ""
 draft: false
 ---
