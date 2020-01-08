@@ -1,3 +1,5 @@
+# CONTRIBUTING
+
 ## Events 
 
 To add an event to the list, please send PR.
