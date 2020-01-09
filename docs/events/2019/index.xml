@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2019 on Angular Fun</title>
+    <link>https://angular.fun/events/2019/</link>
+    <description>Recent content in 2019 on Angular Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://angular.fun/events/2019/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>angularday</title>
+      <link>https://angular.fun/events/2019/2019-angular-day/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2019/2019-angular-day/</guid>
+      <description>Talks  Sam Bellen - Knock knock, who&#39;s there? Authenticating your single page apps using JSON Web Tokens Önder Ceylan - Level up your NgRx game Zack Chapple - Adventures in Node and Ne Stephen Fluin - What&#39;s new in 8.0 (live streamin Elena Gancheva - Elegance of Movement with Reactive Angular Animation Francesco Leardini - Offline web applications don&#39;t exist anymore! Keilla Menezes - To be reactive, that&#39;s the answer!</description>
+    </item>
+    
+  </channel>
+</rss>
