@@ -1,8 +1,11 @@
 <div class="post event-post">
     <a class="post-link" href="{{ .Permalink }}">
+        {{ if .Params.country }}
         <p class="post-meta left">
             {{ .Params.country }}, {{ .Params.city }}
         </p>
+        {{end}}
+
         <p class="post-author right">
             {{ .Params.textDate }}
         </p>
