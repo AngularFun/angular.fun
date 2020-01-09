@@ -6,3 +6,4 @@ contentDir = "content"
 layoutDir = "layouts"
 enableEmoji = true
 publishDir = "docs"
+googleAnalytics = "UA-155942506-1"
