@@ -1,4 +1,3 @@
 ---
-title: "2019"
-
+title: 'Conferences 2019'
 ---
