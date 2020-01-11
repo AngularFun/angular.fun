@@ -19,5 +19,15 @@
       <description>Talks  Sam Bellen - Knock knock, who&#39;s there? Authenticating your single page apps using JSON Web Tokens Önder Ceylan - Level up your NgRx game Zack Chapple - Adventures in Node and Ne Stephen Fluin - What&#39;s new in 8.0 (live streamin Elena Gancheva - Elegance of Movement with Reactive Angular Animation Francesco Leardini - Offline web applications don&#39;t exist anymore! Keilla Menezes - To be reactive, that&#39;s the answer!</description>
     </item>
     
+    <item>
+      <title>ng-conf</title>
+      <link>https://angular.fun/events/2019/2019-ng-conf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2019/2019-ng-conf/</guid>
+      <description>Video play list: https://www.youtube.com/playlist?list=PLOETEcp3DkCpimylVKTDe968yNmNIajlR
+Text https://nitayneeman.com/posts/all-talks-from-ng-conf-2019/</description>
+    </item>
+    
   </channel>
 </rss>
