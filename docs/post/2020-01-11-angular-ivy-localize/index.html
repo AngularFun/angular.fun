@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Angular i18n &amp; localization with Ivy - Angular Fun</title>
+  <title>Angular i18n &amp; l10n with Ivy - Angular Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -47,13 +47,15 @@
   <div class="post p2 p-responsive wrap" role="main">
     <div class="measure">
       <div class="post-header mb2">
-        <h1 class="py2">Angular i18n &amp; localization with Ivy</h1>
-        <span class="post-meta">Jan 11, 2020 by Rustam</span><br>
+        <h1 class="py2">Angular i18n &amp; l10n with Ivy</h1>
+        <span class="post-meta">Jan 11, 2020 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
         
       </div>
 
       <article class="post-content">
-      <p>i18n and localization are the things that are available in Angular by default.
+        <p>Internationalization and localization are the things that are available in Angular by default.
 In previous versions of Angular i18n was static and had to generate bundles for each language.
 But with Angular Ivy we will be able to dynamically load the language.</p>
 <h3 id="1-internationalization-with-angularlocalize">1. Internationalization with @angular/localize</h3>
@@ -75,7 +77,8 @@ But with Angular Ivy we will be able to dynamically load the language.</p>
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">loadTranslations</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/localize&#39;</span>;
 
 <span style="color:#a6e22e">loadTranslations</span>({
-  <span style="color:#e6db74">&#39;1815172606781074132&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Bonjour {$name}\xa0! Vous avez {$userCount} utilisateurs.&#39;</span>
+  <span style="color:#e6db74">&#39;1815172606781074132&#39;</span><span style="color:#f92672">:</span>
+    <span style="color:#e6db74">&#39;Bonjour {$name}\xa0! Vous avez {$userCount} utilisateurs.&#39;</span>
 });
 </code></pre></div><hr>
 <h3 id="2-lazy-loading-locales-with-angular">2. Lazy Loading Locales with Angular</h3>
@@ -88,9 +91,9 @@ But with Angular Ivy we will be able to dynamically load the language.</p>
 <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">localeDeAt</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common/locales/de-AT&#39;</span>;
 <span style="color:#66d9ef">import</span> <span style="color:#a6e22e">localeEs</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common/locales/es&#39;</span>;
 
-<span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeDe</span>);     <span style="color:#75715e">// de-DE
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeDeAt</span>);   <span style="color:#75715e">// de-AT
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeEs</span>);     <span style="color:#75715e">// es-ES
+<span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeDe</span>); <span style="color:#75715e">// de-DE
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeDeAt</span>); <span style="color:#75715e">// de-AT
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeEs</span>); <span style="color:#75715e">// es-ES
 </span></code></pre></div><p>After:</p>
 <p>Global locales (<code>global.ng.common.locales</code>)</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"> <span style="color:#a6e22e">loader</span>.<span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#39;assets/de.js&#39;</span>)
@@ -111,15 +114,14 @@ But with Angular Ivy we will be able to dynamically load the language.</p>
 </code></pre><p>Extractor support formats: xlf, xlf2, xmb, json.</p>
 <h4 id="locl-core">Locl Core</h4>
 <p>Locl Core - A library with various utility functions to help you with $localize. Loading the translations at runtime.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">
-<span style="color:#75715e">// Load `$localize` onto the global scope.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">// Load `$localize` onto the global scope.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;@angular/localize/init&#39;</span>;
- 
+
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">loadTranslations</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/localize&#39;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">platformBrowserDynamic</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/platform-browser-dynamic&#39;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">getTranslations</span>, <span style="color:#a6e22e">ParsedTranslationBundle</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@locl/core&#39;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AppModule</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./app/app.module&#39;</span>;
- 
+
 <span style="color:#a6e22e">getTranslations</span>(<span style="color:#e6db74">&#39;/assets/i18n/fr.json&#39;</span>).<span style="color:#a6e22e">then</span>(
   (<span style="color:#a6e22e">data</span>: <span style="color:#66d9ef">ParsedTranslationBundle</span>) <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> {
     <span style="color:#a6e22e">loadTranslations</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">translations</span>);
@@ -128,7 +130,6 @@ But with Angular Ivy we will be able to dynamically load the language.</p>
       .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>));
   }
 );
-
 </code></pre></div><p>And this library have 2 util functions:</p>
 <ul>
 <li>getBrowserLang()</li>
@@ -138,11 +139,11 @@ But with Angular Ivy we will be able to dynamically load the language.</p>
 
       <p class="post-meta">Tags:&nbsp;
         
-            
-            <a href="https://angular.fun/tags/blog">blog</a>
         
-            ,&nbsp;
-            <a href="https://angular.fun/tags/ivy">ivy</a>
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+        ,&nbsp;
+        <a href="https://angular.fun/tags/ivy">ivy</a>
         
       </p>
 
@@ -186,4 +187,3 @@ if (!doNotTrack) {
 
 </body>
 </html>
-
