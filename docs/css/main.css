@@ -14,10 +14,11 @@
 */
 
 body {
-  font-family: "Ubuntu", "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: 'Ubuntu', 'PT Serif', Georgia, 'Times New Roman', serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -32,25 +33,26 @@ img {
 }
 
 .site-wrap:after {
-  content: "";
+  content: '';
   display: block;
 }
 
-.footer, .site-wrap:after {
+.footer,
+.site-wrap:after {
   height: 120px;
 }
 
 body {
   font-size: 1.5rem;
 
-          box-sizing: border-box;
-     -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
 .gist,
 .gist .highlight .p {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .gist .lines {
@@ -99,13 +101,13 @@ body {
 
 .posts .post {
   margin-bottom: 0.75em;
-  padding-bottom: .375em;
+  padding-bottom: 0.375em;
   border-bottom: thin solid #f3f3f3;
 }
 
 .posts .post:last-child {
   border-bottom: none;
-  margin-bottom: .375em;
+  margin-bottom: 0.375em;
   padding-bottom: 0;
 }
 
@@ -118,7 +120,7 @@ body {
 .post-footer {
   @extend .italic;
 
-  margin-top: .75rem;
+  margin-top: 0.75rem;
   text-align: center;
 }
 
@@ -136,7 +138,8 @@ body {
   text-align: center;
 }
 
-.pagination a, .pagination .disabled {
+.pagination a,
+.pagination .disabled {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -151,7 +154,8 @@ body {
   opacity: 0.5;
 }
 
-.pagination a:hover, .pagination a:focus {
+.pagination a:hover,
+.pagination a:focus {
   background: white;
   color: #477dca;
 }
@@ -170,7 +174,7 @@ body {
   font-size: 1rem;
   font-weight: 300;
   margin: 0;
-  padding: .25em 0;
+  padding: 0.25em 0;
   color: #7a7a7a;
   font-style: italic;
 }
@@ -214,8 +218,9 @@ abbr {
   cursor: help;
 }
 
-pre, code {
-  font-family: Menlo, Monaco, "Courier New", monospace
+pre,
+code {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
 }
 
 code {
@@ -241,7 +246,7 @@ blockquote {
 }
 
 blockquote footer {
-  font-size: .85rem;
+  font-size: 0.85rem;
   font-style: normal;
   background-color: #fff;
   color: #7a7a7a;
@@ -260,28 +265,28 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 900;
   line-height: 1.2;
   margin: 0.414em 0 0.5em;
 }
 
 .social-icons {
-    padding: 0.5em 0 0 0;
-    font-size: 1.25rem;
-    width: 100%;
+  padding: 0.5em 0 0 0;
+  font-size: 1.25rem;
+  width: 100%;
 }
 .social-icons a.fa {
-    padding: 0.2em;
-    opacity: 0.8;
-    cursor: pointer;
+  padding: 0.2em;
+  opacity: 0.8;
+  cursor: pointer;
 }
 .social-icons a.fa:hover {
-    opacity: 1;
+  opacity: 1;
 }
-.social-icons iframe[title=Flattr] {
-    position: relative;
-    top: 0.1em;
+.social-icons iframe[title='Flattr'] {
+  position: relative;
+  top: 0.1em;
 }
 
 @media screen and (min-width: 48em) {
@@ -298,7 +303,7 @@ h6,
 
   .h1,
   h1 {
-    font-size: 3.250rem;
+    font-size: 3.25rem;
   }
 
   .h2,
@@ -313,7 +318,7 @@ h6,
 
   .h4,
   h4 {
-    font-size: 1.150rem;
+    font-size: 1.15rem;
   }
 
   .p,
@@ -339,7 +344,7 @@ h6,
 
   .posts .post:last-child {
     border-bottom: none;
-    margin-bottom: .333em;
+    margin-bottom: 0.333em;
     padding-bottom: 0;
   }
 }
@@ -381,7 +386,8 @@ h6,
     margin-bottom: 1.333em;
   }
 
-  .social-icons .left, .social-icons .right {
+  .social-icons .left,
+  .social-icons .right {
     text-align: center;
     float: none;
   }
@@ -409,11 +415,11 @@ h6,
   }
 
   .posts .post-meta .post-author {
-    padding-bottom: .2em;
+    padding-bottom: 0.2em;
   }
 
   .post-link .post-title {
-    margin-top: .125em;
+    margin-top: 0.125em;
   }
 
   .posts .post {
@@ -424,7 +430,7 @@ h6,
 
   .posts .post:last-child {
     border-bottom: none;
-    margin-bottom: .666em;
+    margin-bottom: 0.666em;
     padding-bottom: 0;
   }
 }
@@ -443,7 +449,7 @@ footer .wrap {
 }
 
 footer:after {
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -455,19 +461,23 @@ Licensed under the MIT license - http://opensource.org/license/MIT
 */
 
 .icons a {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin: 10px;
-    vertical-align: middle;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
-    -ms-transition: all .3s;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+  vertical-align: middle;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -ms-transition: all 0.3s;
 }
 
-.icons a.rss { background: url(/images/icons/rss.png) left top no-repeat; }
-.icons a.twitter { background: url(/images/icons/twitter.png) left top no-repeat; }
+.icons a.rss {
+  background: url(/images/icons/rss.png) left top no-repeat;
+}
+.icons a.twitter {
+  background: url(/images/icons/twitter2.png) left top no-repeat;
+}
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -512,31 +522,31 @@ Copyright (c) 2014 Daniel Eden
     opacity: 0;
 
     -webkit-transform: translateY(-20px) translate3d(0, 0, 0);
-        -ms-transform: translateY(-20px) translate3d(0, 0, 0);
-            transform: translateY(-20px) translate3d(0, 0, 0);
+    -ms-transform: translateY(-20px) translate3d(0, 0, 0);
+    transform: translateY(-20px) translate3d(0, 0, 0);
   }
 
   100% {
     opacity: 1;
 
     -webkit-transform: translateY(0) translate3d(0, 0, 0);
-        -ms-transform: translateY(0) translate3d(0, 0, 0);
-            transform: translateY(0) translate3d(0, 0, 0);
+    -ms-transform: translateY(0) translate3d(0, 0, 0);
+    transform: translateY(0) translate3d(0, 0, 0);
   }
 }
 
 .fade-in-down {
   -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }
 /* Pagination */
-.paginatin_area{
+.paginatin_area {
   margin: 0;
   overflow: hidden;
   padding: 4px 0 94px;
   text-align: center;
 }
-.paginatin_area ul{
+.paginatin_area ul {
   display: inline-block;
   list-style: none outside none;
   margin: 0;
@@ -544,13 +554,13 @@ Copyright (c) 2014 Daniel Eden
   padding: 0;
   text-align: center;
 }
-.paginatin_area ul li{
+.paginatin_area ul li {
   display: block;
   float: left;
   margin: 0;
   padding: 0;
 }
-.paginatin_area ul li a{
+.paginatin_area ul li a {
   background: none repeat scroll 0 0 #262626;
   border-radius: 4px;
   color: #fff;
@@ -564,24 +574,26 @@ Copyright (c) 2014 Daniel Eden
   min-width: 30px;
   padding: 6px;
   text-decoration: none;
-  -moz-transition:all .4s;
-  -webkit-transition:all .4s;
-  -ms-transition:all .4s;
-  -o-transition:all .4s;
-  transition:all .4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
-.paginatin_area ul li.active a{
-  background:#b3b3b1;
+.paginatin_area ul li.active a {
+  background: #b3b3b1;
 }
-.paginatin_area ul li.active a:hover{
-  background:#b3b3b1;
+.paginatin_area ul li.active a:hover {
+  background: #b3b3b1;
 }
-.paginatin_area ul li a:hover{
-  background:#37C392;
+.paginatin_area ul li a:hover {
+  background: #37c392;
 }
-.paginatin_area ul li a i{}
-.p_arrow{}
-.p_arrow i{
+.paginatin_area ul li a i {
+}
+.p_arrow {
+}
+.p_arrow i {
   display: block;
   font-family: lato;
   font-size: 1rem;
