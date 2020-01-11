@@ -6,4 +6,5 @@ tags: ["blog"]
 author: "Rustam"
 ---
 
-Hi!
+Hello, everyone! This is a new site for Angular fans. 
+This site will publish links to interesting articles with their explanation.

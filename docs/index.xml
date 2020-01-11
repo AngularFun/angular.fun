@@ -6,7 +6,18 @@
     <language>en-us</language>
     
     
-    <updated>Sun, 05 Jan 2020 21:38:47 MSK</updated>
+    <updated>Sat, 11 Jan 2020 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Angular i18n &amp; localization with Ivy</title>
+      <link>https://angular.fun/post/2020-01-11-angular-ivy-localize/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-01-11-angular-ivy-localize/</guid>
+      <description>&lt;p&gt;i18n and localization are the things that are available in Angular by default.
+In previous versions of Angular i18n was static and had to generate bundles for each language.
+But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hello World</title>
@@ -14,7 +25,7 @@
       <pubDate>Sun, 05 Jan 2020 21:38:47 MSK</pubDate>
       
       <guid>https://angular.fun/post/hello-world/</guid>
-      <description>Hi!</description>
+      <description>Hello, everyone! This is a new site for Angular fans. This site will publish links to interesting articles with their explanation.</description>
     </item>
     
     <item>

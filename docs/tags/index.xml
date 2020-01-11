@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Angular Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jan 2020 21:38:47 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://angular.fun/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>blog</title>
       <link>https://angular.fun/tags/blog/</link>
-      <pubDate>Sun, 05 Jan 2020 21:38:47 +0300</pubDate>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://angular.fun/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ivy</title>
+      <link>https://angular.fun/tags/ivy/</link>
+      <pubDate>Sat, 11 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/tags/ivy/</guid>
       <description></description>
     </item>
     
