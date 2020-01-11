@@ -10,7 +10,7 @@ city: 'Salt Lake City'
 draft: false
 ---
 
-### Video play list:
+### Video playlist:
 
 https://www.youtube.com/playlist?list=PLOETEcp3DkCpimylVKTDe968yNmNIajlR
 
