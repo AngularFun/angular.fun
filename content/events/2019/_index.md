@@ -1,3 +1,4 @@
 ---
-title: 'Conferences 2019'
+title: '😺 Conferences 2019'
+folder: true
 ---

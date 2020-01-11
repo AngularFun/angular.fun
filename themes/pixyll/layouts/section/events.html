@@ -8,8 +8,12 @@
             <div class="post-header mb2">
                 <h1 class="py2">{{ .Title }}</h1>
 
+                {{ range where .Data.Pages ".Params.folder" true }}
+                {{ .Render "folder-li"}}
+                {{ end }}
+
                 {{ range sort (where .Data.Pages "Section" "events") ".Params.dated" }}
-                 {{ .Render "event-li"}}
+                {{ .Render "event-li"}}
                 {{ end }}
             </div>
             <div>
@@ -18,7 +22,7 @@
                 </a>
             </div>
         </div>
-       
+
     </div>
 </div>
 

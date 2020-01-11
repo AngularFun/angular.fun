@@ -1,3 +1,4 @@
+{{ if ne .Params.folder true }}
 <div class="post event-post">
     <a class="post-link" href="{{ .Permalink }}">
         {{ if .Params.country }}
@@ -23,3 +24,4 @@
     </a>
     {{ $baseurl := .Site.BaseURL }}
 </div>
+{{ end }}
