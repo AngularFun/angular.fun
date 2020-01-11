@@ -29,6 +29,55 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Angular Berlin</title>
+      <link>https://angular.fun/events/meetup/2020-02-ng-berlin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-02-ng-berlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Kharkiv</title>
+      <link>https://angular.fun/events/meetup/2020-01-ng-kharkiv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-ng-kharkiv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Leipzig</title>
+      <link>https://angular.fun/events/meetup/2020-01-ng-leipzig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-ng-leipzig/</guid>
+      <description>#24: The future of Angular in the post-Ivy release</description>
+    </item>
+    
+    <item>
+      <title>Angular Medellin</title>
+      <link>https://angular.fun/events/meetup/2020-01-ng-medellin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-ng-medellin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Minsk</title>
+      <link>https://angular.fun/events/meetup/2020-01-ng-minsk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-ng-minsk/</guid>
+      <description>AngularMinsk #7 состоится 16 января 2019! В SPACE в 19:00
+Поговорим о создании и механизме работы форм в Angular. А также расскажем какие перспективы открываются при работе с Ivy для Angular разработчика.
+В программe:
+⚡️ Anatomy of Angular Forms - Шохрýх Давлáтов из компании Inspectorio, рассмотрит принципы работы Template-driven &amp;amp; Reactive forms , создание валидаторов и кастомных элементов, преимущества и недостатки каждого подхода по отдельности.
+⚡️Ivy potential in Anguar 9. The enabler 💣 - Константин Маликов из компании Dev Team расскажет о своём опыте с Ivy, а также перспективах, которые открываются для Angular разработчиков, учитывая, что в ближайшее время выйдет Angular 9 и Ivy в финальной версии.</description>
+    </item>
+    
+    <item>
       <title>angularday</title>
       <link>https://angular.fun/events/2019/2019-angular-day/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -56,6 +105,15 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
+      <title>AngularSP</title>
+      <link>https://angular.fun/events/meetup/2020-01-ng-sp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-ng-sp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>AngularUP</title>
       <link>https://angular.fun/events/2020-angular-up/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -65,12 +123,21 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
+      <title>ATL Angular</title>
+      <link>https://angular.fun/events/meetup/2020-01-ng-atlanta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-ng-atlanta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ng-conf</title>
       <link>https://angular.fun/events/2019/2019-ng-conf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
       <guid>https://angular.fun/events/2019/2019-ng-conf/</guid>
-      <description>Video play list: https://www.youtube.com/playlist?list=PLOETEcp3DkCpimylVKTDe968yNmNIajlR
+      <description>Video playlist: https://www.youtube.com/playlist?list=PLOETEcp3DkCpimylVKTDe968yNmNIajlR
 Text https://nitayneeman.com/posts/all-talks-from-ng-conf-2019/</description>
     </item>
     
@@ -80,51 +147,6 @@ Text https://nitayneeman.com/posts/all-talks-from-ng-conf-2019/</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
       <guid>https://angular.fun/events/2020-ng-conf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>NG-DE</title>
-      <link>https://angular.fun/events/2020-ng-de/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2020-ng-de/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ngAtlanta</title>
-      <link>https://angular.fun/events/2020-ng-atlanta/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2020-ng-atlanta/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ngIndia</title>
-      <link>https://angular.fun/events/2020-ng-india/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2020-ng-india/</guid>
-      <description>Talks  Santosh Yadav - Angular Builders In Depth Siddharth Ajmera - Angular with Bazel and Closure Compiler Nishu Goel - Framework-agnostic web components in Angular Dhananjay Kumar - Welcome Note Rob Wormald - Keynote Manu Murthy - Making the Angular team work for you Jesse Sanders - Cypress Testing in Angular Kapehe Jorgenson - The Battle of House Promises vs. House Observables Michael Hladky - Tackling component-state reactively Sam Julien - Demystifying Token Authentication in NgRx Martina Kraus - The future of Angular in the post-Ivy release Dewansh Parashar - Building native mobile apps using Angular Chris Sevilleja - Using Angular Ivy to Speed Up Your Apps Priyanka Kore - Get you some #PerfCred Robin Böhm - How to Scale with Micro Frontends and Monorepos Jan-Niklas Wortmann - Practice makes perfect - when it comes to RxJS Jinal Shah - Component Development Kit (CDK) in Angular Pankaj Parkar - Higher Order Component in Angular Srashti Jain - Angular Service Worker  </description>
-    </item>
-    
-    <item>
-      <title>ngVikings</title>
-      <link>https://angular.fun/events/2019/2019-ng-vikings/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2019/2019-ng-vikings/</guid>
-      <description>Video playlist https://www.youtube.com/playlist?list=PLVI0Ut22uwY5n8nKfDZeUb14tNksI4ny4</description>
-    </item>
-    
-    <item>
-      <title>ngVikings</title>
-      <link>https://angular.fun/events/2020-ng-vikings/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2020-ng-vikings/</guid>
       <description></description>
     </item>
     
