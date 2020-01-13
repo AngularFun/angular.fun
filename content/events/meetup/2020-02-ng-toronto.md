@@ -1,6 +1,6 @@
 ---
 title: 'AngularToronto'
-dated: 2020-01-10T00:00:00Z
+dated: 2020-02-10T00:00:00Z
 textDate: 'February 10, 2020'
 eventType: 'meetup'
 site: 'https://www.meetup.com/ru-RU/AngularToronto/events/267750202/'
