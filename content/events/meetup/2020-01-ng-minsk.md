@@ -1,6 +1,6 @@
 ---
 title: 'Angular Minsk'
-dated: 2020-01-28T00:00:00Z
+dated: 2020-01-16T00:00:00Z
 textDate: 'January 16, 2020'
 eventType: 'meetup'
 site: 'https://eventspace-by.timepad.ru/event/1229354/'

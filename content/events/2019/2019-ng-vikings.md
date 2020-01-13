@@ -1,7 +1,7 @@
 ---
 title: 'ngVikings'
-dated: 2020-05-01T00:00:00Z
-textDate: 'Late May, Early June, 2020'
+dated: 2019-05-27T00:00:00Z
+textDate: 'May 27-28th, 2019'
 eventType: 'conference'
 site: 'https://2019.ngvikings.org'
 twitter: '@ngVikingsConf'
