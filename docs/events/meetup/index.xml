@@ -12,6 +12,15 @@
     
     <item>
       <title>Angular Berlin</title>
+      <link>https://angular.fun/events/meetup/2020-01-ng-berlin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-ng-berlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Berlin</title>
       <link>https://angular.fun/events/meetup/2020-02-ng-berlin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -66,6 +75,25 @@
       
       <guid>https://angular.fun/events/meetup/2020-01-ng-sp/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>AngularToronto</title>
+      <link>https://angular.fun/events/meetup/2020-02-ng-toronto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-02-ng-toronto/</guid>
+      <description>🕒 6:20
+🎤 Building Large Angular applications with Bazel
+🗣 Matthew Mackay (https://twitter.com/MattMackay)
+💻 Technical Lead - Build and Developer Infrastructure at Evertz Microsystems
+ 🕒 7:10
+🎤 Enhancing the workspace with Custom Builders
+🗣 Benjamin Cabanes (https://twitter.com/bencabanes)
+💻 Senior Angular Engineer at Nrwl.io
+ 🕒 7:50 🎤 Building mobile apps with Ionic
+🗣 Mike Hartington (https://twitter.com/mhartington)
+💻Developer Advocate at Ionic | Google Developers Expert in Angular, Firebase, Web Technologies</description>
     </item>
     
     <item>
