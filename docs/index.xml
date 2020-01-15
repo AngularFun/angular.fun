@@ -65,6 +65,18 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Angular Lyon</title>
+      <link>https://angular.fun/events/meetup/2020-01-ng-lyon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-ng-lyon/</guid>
+      <description>📝 Programme :
+1️⃣ Practice makes perfect - when it comes to RxJS
+🇬🇧 Remote talk in english (also available in german)
+By making a deep dive into a very advanced real-world example, one will experience the strengths of RxJS. Additionally, it will help everyone to establish a reactive mindset, which is definitely the most crucial skill needed for being efficient with RxJS. Together we are going to develop a fully-featured carousel implementation, heavily relying on RxJS.</description>
+    </item>
+    
+    <item>
       <title>Angular Medellin</title>
       <link>https://angular.fun/events/meetup/2020-01-ng-medellin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -147,15 +159,6 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
       <guid>https://angular.fun/events/2020-angular-up/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ATL Angular</title>
-      <link>https://angular.fun/events/meetup/2020-01-ng-atlanta/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-01-ng-atlanta/</guid>
       <description></description>
     </item>
     
