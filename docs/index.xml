@@ -117,6 +117,17 @@ By making a deep dive into a very advanced real-world example, one will experien
     </item>
     
     <item>
+      <title>Angular Portland</title>
+      <link>https://angular.fun/events/meetup/2020-01-angular-portland/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-angular-portland/</guid>
+      <description>Angular 9 is here! (Well, technically it will be here sometime before this meetup occurs.) It&#39;s a HUGE DEAL, so we want to help you get prepped!
+We&#39;re celebrating Angular 9 and our new co-organizer Brian Love with an information-packed meetup all about Angular 9.
+Sam Julien will kick us off by speaking on how you can successfully prepare for and migrate to Angular 9. Then, Brian will talk about all the amazing new features of Angular 9, including the highly anticipated Ivy renderer!</description>
+    </item>
+    
+    <item>
       <title>angularday</title>
       <link>https://angular.fun/events/2019/2019-angular-day/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -140,15 +151,6 @@ By making a deep dive into a very advanced real-world example, one will experien
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
       <guid>https://angular.fun/events/2020-angularnl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AngularSP</title>
-      <link>https://angular.fun/events/meetup/2020-01-ng-sp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-01-ng-sp/</guid>
       <description></description>
     </item>
     
