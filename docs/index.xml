@@ -117,6 +117,29 @@ By making a deep dive into a very advanced real-world example, one will experien
     </item>
     
     <item>
+      <title>Angular NYC</title>
+      <link>https://angular.fun/events/meetup/2020-01-21-angular-nyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-21-angular-nyc/</guid>
+      <description>🕒 6:45 - Nir Kaufman
+🎤 Extendable Shared Components Techniques
+Let&#39;s revisit conventional and less-known techniques for building reusable, extendable Angular UI components with content projection, dynamic templates, and declarative directives.
+🕒 7:20 - Jason Jean (http://Nx.dev &amp;amp; Nrwl.io)
+🎤 What&#39;s new in Nx?
+Nx is an extensible devtool that helps you develop like Google, Microsoft, and Facebook by using a monorepo. In the last year, a ton of new features have been added.</description>
+    </item>
+    
+    <item>
+      <title>Angular NYC - workshop</title>
+      <link>https://angular.fun/events/meetup/2020-01-27-angular-nyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-27-angular-nyc/</guid>
+      <description>Angular Codelab</description>
+    </item>
+    
+    <item>
       <title>Angular Portland</title>
       <link>https://angular.fun/events/meetup/2020-01-angular-portland/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -134,24 +157,6 @@ Sam Julien will kick us off by speaking on how you can successfully prepare for 
       
       <guid>https://angular.fun/events/2019/2019-angular-day/</guid>
       <description>Talks  Sam Bellen - Knock knock, who&#39;s there? Authenticating your single page apps using JSON Web Tokens Önder Ceylan - Level up your NgRx game Zack Chapple - Adventures in Node and Ne Stephen Fluin - What&#39;s new in 8.0 (live streamin Elena Gancheva - Elegance of Movement with Reactive Angular Animation Francesco Leardini - Offline web applications don&#39;t exist anymore! Keilla Menezes - To be reactive, that&#39;s the answer!</description>
-    </item>
-    
-    <item>
-      <title>angularday</title>
-      <link>https://angular.fun/events/2020-angular-day/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2020-angular-day/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AngularNL</title>
-      <link>https://angular.fun/events/2020-angularnl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2020-angularnl/</guid>
-      <description></description>
     </item>
     
   </channel>

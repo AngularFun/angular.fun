@@ -99,6 +99,29 @@ By making a deep dive into a very advanced real-world example, one will experien
     </item>
     
     <item>
+      <title>Angular NYC</title>
+      <link>https://angular.fun/events/meetup/2020-01-21-angular-nyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-21-angular-nyc/</guid>
+      <description>🕒 6:45 - Nir Kaufman
+🎤 Extendable Shared Components Techniques
+Let&#39;s revisit conventional and less-known techniques for building reusable, extendable Angular UI components with content projection, dynamic templates, and declarative directives.
+🕒 7:20 - Jason Jean (http://Nx.dev &amp;amp; Nrwl.io)
+🎤 What&#39;s new in Nx?
+Nx is an extensible devtool that helps you develop like Google, Microsoft, and Facebook by using a monorepo. In the last year, a ton of new features have been added.</description>
+    </item>
+    
+    <item>
+      <title>Angular NYC - workshop</title>
+      <link>https://angular.fun/events/meetup/2020-01-27-angular-nyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-01-27-angular-nyc/</guid>
+      <description>Angular Codelab</description>
+    </item>
+    
+    <item>
       <title>Angular Portland</title>
       <link>https://angular.fun/events/meetup/2020-01-angular-portland/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
