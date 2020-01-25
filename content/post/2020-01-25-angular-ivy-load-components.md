@@ -35,8 +35,6 @@ const { instance } = this.quizContainer.createComponent(
 
 ### 2. Lazy Loading Locales with Angular
 
-https://www.softwarearchitekt.at/aktuelles/lazy-loading-locals-with-angular/
-
 Netanel Basal [@NetanelBasal](https://twitter.com/NetanelBasal)
 
 A simple and quick example of lazy load components with Ivy
