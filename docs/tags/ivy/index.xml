@@ -6,10 +6,19 @@
     <description>Recent content in ivy on Angular Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://angular.fun/tags/ivy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular Ivy lazy load components</title>
+      <link>https://angular.fun/post/2020-01-25-angular-ivy-load-components/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/post/2020-01-25-angular-ivy-load-components/</guid>
+      <description>&lt;p&gt;Loading of components in Ivy without linking to modules, thanks to the &amp;ldquo;Locality&amp;rdquo; principle&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Angular i18n &amp; l10n with Ivy</title>
