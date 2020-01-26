@@ -56,6 +56,15 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Angular Colorado</title>
+      <link>https://angular.fun/events/2020-angular-colorado/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/2020-angular-colorado/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Angular Kharkiv</title>
       <link>https://angular.fun/events/meetup/2020-01-ng-kharkiv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -146,17 +155,6 @@ Nx is an extensible devtool that helps you develop like Google, Microsoft, and F
       
       <guid>https://angular.fun/events/meetup/2020-01-27-angular-nyc/</guid>
       <description>Angular Codelab</description>
-    </item>
-    
-    <item>
-      <title>Angular Portland</title>
-      <link>https://angular.fun/events/meetup/2020-01-angular-portland/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-01-angular-portland/</guid>
-      <description>Angular 9 is here! (Well, technically it will be here sometime before this meetup occurs.) It&#39;s a HUGE DEAL, so we want to help you get prepped!
-We&#39;re celebrating Angular 9 and our new co-organizer Brian Love with an information-packed meetup all about Angular 9.
-Sam Julien will kick us off by speaking on how you can successfully prepare for and migrate to Angular 9. Then, Brian will talk about all the amazing new features of Angular 9, including the highly anticipated Ivy renderer!</description>
     </item>
     
   </channel>
