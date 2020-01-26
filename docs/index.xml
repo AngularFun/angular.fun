@@ -6,7 +6,16 @@
     <language>en-us</language>
     
     
-    <updated>Sat, 11 Jan 2020 00:00:00 UTC</updated>
+    <updated>Sat, 25 Jan 2020 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Angular Ivy lazy load components</title>
+      <link>https://angular.fun/post/2020-01-25-angular-ivy-load-components/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-01-25-angular-ivy-load-components/</guid>
+      <description>&lt;p&gt;Loading of components in Ivy without linking to modules, thanks to the &amp;ldquo;Locality&amp;rdquo; principle&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Angular i18n &amp; l10n with Ivy</title>
@@ -148,15 +157,6 @@ Nx is an extensible devtool that helps you develop like Google, Microsoft, and F
       <description>Angular 9 is here! (Well, technically it will be here sometime before this meetup occurs.) It&#39;s a HUGE DEAL, so we want to help you get prepped!
 We&#39;re celebrating Angular 9 and our new co-organizer Brian Love with an information-packed meetup all about Angular 9.
 Sam Julien will kick us off by speaking on how you can successfully prepare for and migrate to Angular 9. Then, Brian will talk about all the amazing new features of Angular 9, including the highly anticipated Ivy renderer!</description>
-    </item>
-    
-    <item>
-      <title>angularday</title>
-      <link>https://angular.fun/events/2019/2019-angular-day/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2019/2019-angular-day/</guid>
-      <description>Talks  Sam Bellen - Knock knock, who&#39;s there? Authenticating your single page apps using JSON Web Tokens Önder Ceylan - Level up your NgRx game Zack Chapple - Adventures in Node and Ne Stephen Fluin - What&#39;s new in 8.0 (live streamin Elena Gancheva - Elegance of Movement with Reactive Angular Animation Francesco Leardini - Offline web applications don&#39;t exist anymore! Keilla Menezes - To be reactive, that&#39;s the answer!</description>
     </item>
     
   </channel>
