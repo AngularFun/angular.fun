@@ -147,7 +147,7 @@ Sam Julien will kick us off by speaking on how you can successfully prepare for 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://angular.fun/events/meetup/2020-01-angular-raleigh/</guid>
-      <description>Angular 9 is in its final release candidate phases. We expect a stable release between now and Jan 22, 2020. Unlike traditional ngPittsburgh Meetups - we&#39;re going to have multiple speakers speaking on individual features that are coming with Angular 9.</description>
+      <description> Introduction to Angular routing Deep dive to routing concepts (Configuration, Child route, Route guard, Redirect) Develop simple application based on above concepts (Handson)  </description>
     </item>
     
     <item>

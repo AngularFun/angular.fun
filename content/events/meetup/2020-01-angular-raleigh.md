@@ -10,5 +10,6 @@ city: 'Raleigh'
 draft: false
 ---
 
-
-Angular 9 is in its final release candidate phases. We expect a stable release between now and Jan 22, 2020. Unlike traditional ngPittsburgh Meetups - we're going to have multiple speakers speaking on individual features that are coming with Angular 9.
+1. Introduction to Angular routing
+2. Deep dive to routing concepts (Configuration, Child route, Route guard, Redirect)
+3. Develop simple application based on above concepts (Handson)
