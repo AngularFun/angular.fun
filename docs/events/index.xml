@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>AngularConnect</title>
+      <link>https://angular.fun/events/2020-angular-connect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020-angular-connect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>angularday</title>
       <link>https://angular.fun/events/2020-angular-day/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -79,6 +88,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://angular.fun/events/2020-ng-de/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NG-Rome</title>
+      <link>https://angular.fun/events/2020-ng-rome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020-ng-rome/</guid>
       <description></description>
     </item>
     
