@@ -140,6 +140,17 @@ Nx is an extensible devtool that helps you develop like Google, Microsoft, and F
     </item>
     
     <item>
+      <title>Angular NYC - workshop</title>
+      <link>https://angular.fun/events/meetup/2020-02-18-angular-nyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-02-18-angular-nyc/</guid>
+      <description>👨‍💻Boris Yakubchik (http://yboris.dev/)
+🎤 2 Years with Angular &amp;amp; Electron: Video Hub App 2
+Learn how to get started with Electron and Angular (Create a Win, Mac, &amp;amp; Linux App with one code base). Discover how powerful Angular pipes can be for an advanced search &amp;amp; filter functionality. Find out how functional programming can in places simplify your code. Hear how making a project open source was an excellent decision for Video Hub App.</description>
+    </item>
+    
+    <item>
       <title>Angular Portland</title>
       <link>https://angular.fun/events/meetup/2020-01-angular-portland/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
