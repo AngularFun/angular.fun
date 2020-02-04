@@ -1,5 +1,5 @@
 ---
-title: 'Angular NYC - workshop'
+title: 'Angular NYC'
 dated: 2020-02-18T00:00:00Z
 textDate: 'February 18, 2020'
 eventType: 'meetup'
