@@ -20,6 +20,16 @@
     </item>
     
     <item>
+      <title>Angular Belarus</title>
+      <link>https://angular.fun/events/meetup/2020-02-28-ng-belarus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-02-28-ng-belarus/</guid>
+      <description>📌 “Mighty Decorators in Typescript” - what could we get out of it? Валентин Кононов, Fullstack Engineer, Mapbox
+📌 “Going nuts inside Ivy” Никита Полторацкий, Fullstack Engineer, Akveo</description>
+    </item>
+    
+    <item>
       <title>Angular Berlin</title>
       <link>https://angular.fun/events/meetup/2020-01-ng-berlin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

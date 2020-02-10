@@ -47,6 +47,16 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Angular Belarus</title>
+      <link>https://angular.fun/events/meetup/2020-02-28-ng-belarus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-02-28-ng-belarus/</guid>
+      <description>📌 “Mighty Decorators in Typescript” - what could we get out of it? Валентин Кононов, Fullstack Engineer, Mapbox
+📌 “Going nuts inside Ivy” Никита Полторацкий, Fullstack Engineer, Akveo</description>
+    </item>
+    
+    <item>
       <title>Angular Berlin</title>
       <link>https://angular.fun/events/meetup/2020-01-ng-berlin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -140,15 +150,6 @@ By making a deep dive into a very advanced real-world example, one will experien
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
       <guid>https://angular.fun/events/meetup/2020-01-angular-mvd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular MVD</title>
-      <link>https://angular.fun/events/meetup/2020-02-angular-mvd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-02-angular-mvd/</guid>
       <description></description>
     </item>
     
