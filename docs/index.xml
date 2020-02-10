@@ -84,6 +84,15 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Angular DC</title>
+      <link>https://angular.fun/events/meetup/2020-02-12-angular-dc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-02-12-angular-dc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Angular Kharkiv</title>
       <link>https://angular.fun/events/meetup/2020-01-ng-kharkiv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -142,15 +151,6 @@ By making a deep dive into a very advanced real-world example, one will experien
 В программe:
 ⚡️ Anatomy of Angular Forms - Шохрýх Давлáтов из компании Inspectorio, рассмотрит принципы работы Template-driven &amp;amp; Reactive forms , создание валидаторов и кастомных элементов, преимущества и недостатки каждого подхода по отдельности.
 ⚡️Ivy potential in Anguar 9. The enabler 💣 - Константин Маликов из компании Dev Team расскажет о своём опыте с Ivy, а также перспективах, которые открываются для Angular разработчиков, учитывая, что в ближайшее время выйдет Angular 9 и Ivy в финальной версии.</description>
-    </item>
-    
-    <item>
-      <title>Angular MVD</title>
-      <link>https://angular.fun/events/meetup/2020-01-angular-mvd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-01-angular-mvd/</guid>
-      <description></description>
     </item>
     
   </channel>
