@@ -245,11 +245,22 @@ Sam Julien will kick us off by speaking on how you can successfully prepare for 
     
     <item>
       <title>ATL Angular</title>
-      <link>https://angular.fun/events/meetup/2020-01-15-angular-atlanta/</link>
+      <link>https://angular.fun/events/meetup/2020-01-15-angular-atl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://angular.fun/events/meetup/2020-01-15-angular-atlanta/</guid>
+      <guid>https://angular.fun/events/meetup/2020-01-15-angular-atl/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>ATL Angular</title>
+      <link>https://angular.fun/events/meetup/2020-03-04-angular-atl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-03-04-angular-atl/</guid>
+      <description>EVENT DETAILS:
+&amp;ldquo;GraphQL: What&#39;s all the fuss anyway?&amp;rdquo; by Josh Oppenheim
+GraphQL is already being used by many teams of all sizes to clearly and efficiently get applications precisely the data they need from potentially many APIs. Together we&#39;ll learn the basics of GraphQL - What it&#39;s for, what benefits it could bring to your app, when you should use it, and how to incrementally incorporate GraphQL into your organization&#39;s tech stack.</description>
     </item>
     
     <item>
