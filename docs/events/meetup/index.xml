@@ -326,6 +326,16 @@ Sam Julien will kick us off by speaking on how you can successfully prepare for 
     </item>
     
     <item>
+      <title>STL Angular</title>
+      <link>https://angular.fun/events/meetup/2020-02-19-angular-stl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-02-19-angular-stl/</guid>
+      <description>This month we will be kicking off a series of talks titled &amp;ldquo;Angular the Platform&amp;rdquo;. In this series we will be exploring each of the composite pieces that go into making Angular more than just another component framework. To start this series we will learn about the Angular CLI.
+The starting point for most folks coming to Angular, the Angular CLI is an amazing collection of tools, configuration and schematics that make modern Angular development possible.</description>
+    </item>
+    
+    <item>
       <title>Utah Angular</title>
       <link>https://angular.fun/events/meetup/2020-01-28-angular-utah/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
