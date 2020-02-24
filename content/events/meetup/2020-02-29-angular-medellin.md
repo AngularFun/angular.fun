@@ -11,7 +11,7 @@ draft: false
 ---
 
 
-# Workshop: Angular next level, here we go!
+### Workshop: Angular next level, here we go!
 
 3 Geniales charlas en formato lightning 👨‍🏫
 1 Mega Workshop 👩‍💻
