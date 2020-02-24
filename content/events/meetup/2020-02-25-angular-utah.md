@@ -3,7 +3,7 @@ title: 'Angular Utah'
 dated: 2020-01-28T00:00:00Z
 textDate: 'January 28, 2020'
 eventType: 'meetup'
-site: 'https://www.meetup.com/ru-RU/AngularJS-Utah/events/zvmkhrybccblc/'
+site: 'https://www.meetup.com/ru-RU/AngularJS-Utah'
 twitter: '@AngularJSUtah'
 country: '🇺🇸 USA'
 city: 'Utah'
