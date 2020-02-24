@@ -1,7 +1,7 @@
 ---
 title: 'Angular Utah'
-dated: 2020-01-28T00:00:00Z
-textDate: 'January 28, 2020'
+dated: 2020-02-25T00:00:00Z
+textDate: 'January 25, 2020'
 eventType: 'meetup'
 site: 'https://www.meetup.com/ru-RU/AngularJS-Utah'
 twitter: '@AngularJSUtah'
