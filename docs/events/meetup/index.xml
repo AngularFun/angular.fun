@@ -225,6 +225,15 @@ Sam Julien will kick us off by speaking on how you can successfully prepare for 
     </item>
     
     <item>
+      <title>Angular Raleigh</title>
+      <link>https://angular.fun/events/meetup/2020-03-14-angular-raleigh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-03-14-angular-raleigh/</guid>
+      <description> Discuss different stages needed for Angular application in a CI/CD pipeline. Write Unit tests using Jasmine for the application developed in February month event (Ng Cook book app). Setup pipeline in GitLab to build, test and deploy application to Google Cloud (If time permits we will also see how to do it with AWS and Azure).  </description>
+    </item>
+    
+    <item>
       <title>Angular Utah</title>
       <link>https://angular.fun/events/meetup/2020-01-28-angular-utah/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
