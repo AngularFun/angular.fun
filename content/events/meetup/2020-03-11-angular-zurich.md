@@ -3,7 +3,7 @@ title: 'Angular Zurich'
 dated: 2020-03-11T00:00:00Z
 textDate: 'March 11, 2020'
 eventType: 'meetup'
-site: 'https://www.meetup.com/ru-RU/Swiss-Angular/events/267683390/'
+site: 'https://www.meetup.com/ru-RU/AngularZRH/events/268612576/'
 twitter: '@AngularZurich'
 country: '🇨🇭 Switzerland'
 city: 'Zurich'
