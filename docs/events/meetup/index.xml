@@ -254,6 +254,15 @@ No, we&#39;re not talking about politics when we talk about Progressive Web Apps
     </item>
     
     <item>
+      <title>Angular Zurich</title>
+      <link>https://angular.fun/events/meetup/2020-03-11-angular-zurich/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-03-11-angular-zurich/</guid>
+      <description>Managing Angular Libraries The Angular CLI is a really amazing tool, that simplifies all the non-development bits of software development in Angular applications. It&#39;s not just for applications though - it can also be used for managing shared libraries! We&#39;re going to have a look at one way of setting this up. We&#39;ll cover using schematics for consistency between libraries, as well as the development workflow, testing, and deploying to NPM via Jenkins.</description>
+    </item>
+    
+    <item>
       <title>AngularSP</title>
       <link>https://angular.fun/events/meetup/2020-01-15-angular-sp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
