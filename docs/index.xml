@@ -75,6 +75,18 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Angular Bogota</title>
+      <link>https://angular.fun/events/meetup/2020-03-04-angular-bogota/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-03-04-angular-bogota/</guid>
+      <description>⭐️ ¿Por qué debes actualizar a Angular 9? ⭐️
+👨🏻‍💻 SPEAKER: Alfonso Andrés López Molina - @osnoser1
+👉 BIO: Desarrollador de Software Venezolano con más de 7 años de experiencia y uso de Angular desde versiones tempranas del desarrollo, con aportes a la comunidad @ngVenezuela y a proyectos como @ngrx/platform, ngx-datatable, ngx-auth, etc.
+💼 DESCRIPCIÓN: La espera ha culminado, conoce todas las novedades y mejoras de rendimiento que vienen con esta nueva versión de Angular y que te llevarán a actualizar sin pensarlo dos veces.</description>
+    </item>
+    
+    <item>
       <title>Angular Colorado</title>
       <link>https://angular.fun/events/2020-angular-colorado/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -138,22 +150,6 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
 1️⃣ Practice makes perfect - when it comes to RxJS
 🇬🇧 Remote talk in english (also available in german)
 By making a deep dive into a very advanced real-world example, one will experience the strengths of RxJS. Additionally, it will help everyone to establish a reactive mindset, which is definitely the most crucial skill needed for being efficient with RxJS. Together we are going to develop a fully-featured carousel implementation, heavily relying on RxJS.</description>
-    </item>
-    
-    <item>
-      <title>Angular Lyon</title>
-      <link>https://angular.fun/events/meetup/2020-02-18-angular-lyon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-02-18-angular-lyon/</guid>
-      <description>📝 Programme :
-1️⃣ My journey into mobile and how I fell in love with Ionic
-I was an only developer at a company that had to do lots of native android and iOS apps and there&#39;s only so much you can do. 10 years ago I discovered hybrid web apps and this changed everything for me.
-📢Tobias Kausch
-🐦@tobikabla
- 2️⃣ Rethinking Cross-Platform
-🇬🇧 Remote talk in english
-Building &amp;ldquo;cross-platform&amp;rdquo; apps is often a loaded term.</description>
     </item>
     
   </channel>

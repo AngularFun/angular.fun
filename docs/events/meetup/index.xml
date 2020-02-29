@@ -48,6 +48,18 @@
     </item>
     
     <item>
+      <title>Angular Bogota</title>
+      <link>https://angular.fun/events/meetup/2020-03-04-angular-bogota/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-03-04-angular-bogota/</guid>
+      <description>⭐️ ¿Por qué debes actualizar a Angular 9? ⭐️
+👨🏻‍💻 SPEAKER: Alfonso Andrés López Molina - @osnoser1
+👉 BIO: Desarrollador de Software Venezolano con más de 7 años de experiencia y uso de Angular desde versiones tempranas del desarrollo, con aportes a la comunidad @ngVenezuela y a proyectos como @ngrx/platform, ngx-datatable, ngx-auth, etc.
+💼 DESCRIPCIÓN: La espera ha culminado, conoce todas las novedades y mejoras de rendimiento que vienen con esta nueva versión de Angular y que te llevarán a actualizar sin pensarlo dos veces.</description>
+    </item>
+    
+    <item>
       <title>Angular DC</title>
       <link>https://angular.fun/events/meetup/2020-02-12-angular-dc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
