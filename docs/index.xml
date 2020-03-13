@@ -57,12 +57,21 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     
     <item>
       <title>Angular Belarus</title>
-      <link>https://angular.fun/events/meetup/2020-02-28-ng-belarus/</link>
+      <link>https://angular.fun/events/meetup/2020-02-28-angular-belarus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
-      <guid>https://angular.fun/events/meetup/2020-02-28-ng-belarus/</guid>
+      <guid>https://angular.fun/events/meetup/2020-02-28-angular-belarus/</guid>
       <description>📌 “Mighty Decorators in Typescript” - what could we get out of it? Валентин Кононов, Fullstack Engineer, Mapbox
 📌 “Going nuts inside Ivy” Никита Полторацкий, Fullstack Engineer, Akveo</description>
+    </item>
+    
+    <item>
+      <title>Angular Belarus</title>
+      <link>https://angular.fun/events/meetup/2020-03-31-angular-belarus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-03-31-angular-belarus/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -137,15 +146,6 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
       <guid>https://angular.fun/events/meetup/2020-01-14-angular-il/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular IL</title>
-      <link>https://angular.fun/events/meetup/2020-02-26-angular-il/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-02-26-angular-il/</guid>
       <description></description>
     </item>
     
