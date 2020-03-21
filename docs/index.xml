@@ -66,15 +66,6 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Angular Belarus</title>
-      <link>https://angular.fun/events/meetup/2020-03-31-angular-belarus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-03-31-angular-belarus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Angular Berlin</title>
       <link>https://angular.fun/events/meetup/2020-01-23-angular-berlin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
@@ -146,6 +137,15 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
       
       <guid>https://angular.fun/events/meetup/2020-01-14-angular-il/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular IL</title>
+      <link>https://angular.fun/events/meetup/2020-02-26-angular-il/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-02-26-angular-il/</guid>
       <description></description>
     </item>
     
