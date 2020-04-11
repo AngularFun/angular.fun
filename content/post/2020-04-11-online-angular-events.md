@@ -2,7 +2,7 @@
 title: 'Online Angular Events'
 date: 2020-04-11T00:00:00Z
 draft: false
-tags: ['blog', 'ivy']
+tags: ['blog']
 author: 'Rustam'
 twitter: 'irustm'
 ---

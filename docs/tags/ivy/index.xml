@@ -6,19 +6,10 @@
     <description>Recent content in ivy on Angular Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://angular.fun/tags/ivy/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Online Angular Meetups</title>
-      <link>https://angular.fun/post/2020-04-11-online-angular-events/</link>
-      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://angular.fun/post/2020-04-11-online-angular-events/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Angular Ivy lazy load components</title>
