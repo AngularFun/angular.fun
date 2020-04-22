@@ -7,23 +7,25 @@ author: 'Rustam'
 twitter: 'irustm'
 ---
 
+Updated 22.04.20
+
 <!--more-->
 
 🗓 31.03 [Angular Heidelberg](https://www.youtube.com/watch?v=SfKwFtMFdv8&feature=youtu.be) - Angular and RxJS – Tackling Component State Reactively
 
 🗓 02.04 [Angular Belarus](https://www.youtube.com/watch?v=84IztzCQsl4&feature=youtu.be) - Protractor: Automated testing of Angular apps Dual lab
 
-- What are Angular Reactive Forms?
+-   What are Angular Reactive Forms?
 
 🗓 07.04 [Angular Toronto](https://www.youtube.com/watch?v=rD8V98u7p40) - The State of Angular Deployment, SSR, and Prerendering
 
-- Scaling Development across Multiple Projects with Nx
-- Little App of Horrors - workshop
-- Components Best Practices
+-   Scaling Development across Multiple Projects with Nx
+-   Little App of Horrors - workshop
+-   Components Best Practices
 
 🗓 08.04 [Angular Warsaw](https://www.meetup.com/ru-RU/Angular-Warsaw/events/269833985/) - Sustainable Angular-Architectures with Strategic Design and Nx
 
-- Build your own portal with Angular Embedded views
+-   Build your own portal with Angular Embedded views
 
 🗓 10.04 [Angular Sydney](https://www.youtube.com/watch?v=tQzvdeJzyNY) - Angular 9 with Minko Gechev, Angular components, QnA and more
 
@@ -31,13 +33,17 @@ twitter: 'irustm'
 
 🗓 14.04 [Angular-Leipzig](https://www.meetup.com/ru-RU/Angular-Meetup-Leipzig/events/269466214/)
 
-- Angular - Best practices
-- Angular basics in real world projects.
+-   Angular - Best practices
+-   Angular basics in real world projects.
+
+🗓 16.04 [Angular Moscow](https://www.youtube.com/watch?v=ISAcv5rquwc)
 
 🗓 22.04 [Angular Warsaw](https://www.meetup.com/ru-RU/Angular-Warsaw/events/269887948/)- Extending angular for the reactive web
 
-- Angular End To End (e2e) Testing With Cypress.io
+-   Angular End To End (e2e) Testing With Cypress.io
 
 🗓 25.04 [Angular Online](https://www.meetup.com/ru-RU/Angular-Online-Meetup/events/269373181/) (India)
 
-- Best practices, Routing & more.
+-   Best practices, Routing & more.
+
+🗓 25.04 [Angular Minsk](https://www.youtube.com/watch?v=7LPw-Ebv33M&feature=emb_err_watch_on_yt) - Community Special post ng-conf Online Meetup, ng-conf News Quiz and More!
