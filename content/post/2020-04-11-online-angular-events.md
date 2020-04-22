@@ -7,7 +7,7 @@ author: 'Rustam'
 twitter: 'irustm'
 ---
 
-Updated 22.04.20
+Updated 23.04.20
 
 <!--more-->
 
@@ -38,9 +38,11 @@ Updated 22.04.20
 
 🗓 16.04 [Angular Moscow](https://www.youtube.com/watch?v=ISAcv5rquwc)
 
-🗓 22.04 [Angular Warsaw](https://www.meetup.com/ru-RU/Angular-Warsaw/events/269887948/)- Extending angular for the reactive web
+🗓 22.04 [Angular Warsaw](https://www.meetup.com/ru-RU/Angular-Warsaw/events/269887948/) - Extending angular for the reactive web
 
 -   Angular End To End (e2e) Testing With Cypress.io
+
+🗓 23.04 [NG Poland 2019](https://www.youtube.com/c/NGPoland/live) - Full day broadcast
 
 🗓 25.04 [Angular Online](https://www.meetup.com/ru-RU/Angular-Online-Meetup/events/269373181/) (India)
 
