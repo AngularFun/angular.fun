@@ -6,7 +6,48 @@
     <language>en-us</language>
     
     
-    <updated>Fri, 03 Jul 2020 00:00:00 UTC</updated>
+    <updated>Sun, 13 Sep 2020 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Устранение ресурсов, блокирующих рендеринг в Angular</title>
+      <link>https://angular.fun/post/2020-09-13-angular-blocks-rendering/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-09-13-angular-blocks-rendering/</guid>
+      <description>В разделе «Возможности» вашего отчета Lighthouse перечислены все URL-адреса, блокирующие отрисовку вашей страницы.
+Цель состоит в том, чтобы уменьшить влияние этих URL-адресов, блокирующих рендеринг, путем встраивания критических ресурсов в сам html, откладывания некритических ресурсов и удаления всего неиспользуемого.
+Какие URL помечаются как блокирующий рендеринг?
+&amp;lt;script&amp;gt;
+ если он находится в заголовке если он не имеет аттрибут defer или async  &amp;lt;link rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+ если нет атрибута disabled не имеет атрибута media соответствующий устройству пользователя  Если даже ваш внешний css код будет весить 0кб браузер все равно потратит на него время.</description>
+    </item>
+    
+    <item>
+      <title>Angular new RFC</title>
+      <link>https://angular.fun/post/2020-08-20-angular-new-rfc/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-08-20-angular-new-rfc/</guid>
+      <description>&lt;p&gt;LTO, ngl, Angular Linker, и еще немного информации по roadmap от Angular Team&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular roadmap</title>
+      <link>https://angular.fun/post/2020-08-06-angular-roadmap/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-08-06-angular-roadmap/</guid>
+      <description>&lt;p&gt;На страницах angular.io появилась страница с roadmap (&lt;a href=&#34;https://angular.io/guide/roadmap&#34;&gt;https://angular.io/guide/roadmap&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Make Angular faster</title>
+      <link>https://angular.fun/post/2020-07-22-make-angular-faster/</link>
+      <pubDate>Wed, 22 Jul 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-07-22-make-angular-faster/</guid>
+      <description>&lt;p&gt;Nrwl представила утилиту которая позволит пересобирать проект быстрее. Суть в том что билды складываются в кэш. Бесплатно для использования в локалке, и так же есть возможность закидывать в cloud чтобы шарить билды между командой. (5часов сборки в месяц бесплатно).&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Angular Deno render engine</title>
@@ -108,43 +149,6 @@
       <description>&lt;p&gt;Internationalization and localization are the things that are available in Angular by default.
 In previous versions of Angular i18n was static and had to generate bundles for each language.
 But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://angular.fun/post/hello-world/</link>
-      <pubDate>Sun, 05 Jan 2020 21:38:47 MSK</pubDate>
-      
-      <guid>https://angular.fun/post/hello-world/</guid>
-      <description>Hello, everyone! This is a new site for Angular fans. This site will publish links to interesting articles with their explanation.</description>
-    </item>
-    
-    <item>
-      <title>Angular Abuja</title>
-      <link>https://angular.fun/events/meetup/2020-02-08-angular-abuja/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-02-08-angular-abuja/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular Athens</title>
-      <link>https://angular.fun/events/meetup/2020-03-24-angular-athens/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-03-24-angular-athens/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular Belarus</title>
-      <link>https://angular.fun/events/meetup/2020-02-28-angular-belarus/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-02-28-angular-belarus/</guid>
-      <description>📌 “Mighty Decorators in Typescript” - what could we get out of it? Валентин Кононов, Fullstack Engineer, Mapbox
-📌 “Going nuts inside Ivy” Никита Полторацкий, Fullstack Engineer, Akveo</description>
     </item>
     
   </channel>

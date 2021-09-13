@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Устранение ресурсов, блокирующих рендеринг в Angular - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2020-09-13-angular-blocks-rendering/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Устранение ресурсов, блокирующих рендеринг в Angular</h1>
+        <span class="post-meta">Sep 13, 2020 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>В разделе «Возможности» вашего отчета Lighthouse перечислены все URL-адреса, блокирующие отрисовку вашей страницы.</p>
+<p>Цель состоит в том, чтобы уменьшить влияние этих URL-адресов, блокирующих рендеринг, путем встраивания критических ресурсов в сам html, откладывания некритических ресурсов и удаления всего неиспользуемого.</p>
+<p>Какие URL помечаются как блокирующий рендеринг?</p>
+<p><code>&lt;script&gt;</code></p>
+<ul>
+<li>если он находится в заголовке</li>
+<li>если он не имеет аттрибут defer или async</li>
+</ul>
+<p><code>&lt;link rel=&quot;stylesheet&quot;&gt;</code></p>
+<ul>
+<li>если нет атрибута disabled</li>
+<li>не имеет атрибута media соответствующий устройству пользователя</li>
+</ul>
+<p>Если даже ваш внешний css код будет весить 0кб браузер все равно потратит на него время.</p>
+<p>Все для того чтобы увеличить результаты FCP (first contentful paint)</p>
+<p>Именно над этим хотят сейчас поработать в Angular CLI.</p>
+<ul>
+<li>Загрузку CSS асинхронно в SPA</li>
+<li>встраивания критических CSS в html</li>
+<li>Inline Google Fonts and Icons.</li>
+</ul>
+<p>До:</p>
+<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;</code></p>
+<p>После:</p>
+<pre tabindex="0"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; media=&quot;only x&quot; onload=&quot;this.media='all'&quot;&gt;
+&lt;noscript&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;&lt;/noscript&gt;
+</code></pre><p>Как же будут выбирать критически важные CSS?</p>
+<p>Пока нет достойного решения который бы устраивал в разных режимах, SSR и CSR. Поэтому по поводу идут еще обсуждения, и рассматриваются различные webpack плагины, и даже есть альтернатива всему этому чтобы включить в рутовый AppComponent styles.css. Но болью в этом случае будет с SSR, так как все глобальные стили будут внедрены в html.</p>
+<p>Обсудить предложение в <a href="https://github.com/angular/angular-cli/issues/18730">issue</a></p>
+
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2020<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>

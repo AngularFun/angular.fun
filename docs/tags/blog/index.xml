@@ -6,7 +6,48 @@
     <description>Recent content in blog on Angular Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Устранение ресурсов, блокирующих рендеринг в Angular</title>
+      <link>https://angular.fun/post/2020-09-13-angular-blocks-rendering/</link>
+      <pubDate>Sun, 13 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/post/2020-09-13-angular-blocks-rendering/</guid>
+      <description>В разделе «Возможности» вашего отчета Lighthouse перечислены все URL-адреса, блокирующие отрисовку вашей страницы.
+Цель состоит в том, чтобы уменьшить влияние этих URL-адресов, блокирующих рендеринг, путем встраивания критических ресурсов в сам html, откладывания некритических ресурсов и удаления всего неиспользуемого.
+Какие URL помечаются как блокирующий рендеринг?
+&amp;lt;script&amp;gt;
+ если он находится в заголовке если он не имеет аттрибут defer или async  &amp;lt;link rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+ если нет атрибута disabled не имеет атрибута media соответствующий устройству пользователя  Если даже ваш внешний css код будет весить 0кб браузер все равно потратит на него время.</description>
+    </item>
+    
+    <item>
+      <title>Angular new RFC</title>
+      <link>https://angular.fun/post/2020-08-20-angular-new-rfc/</link>
+      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/post/2020-08-20-angular-new-rfc/</guid>
+      <description>&lt;p&gt;LTO, ngl, Angular Linker, и еще немного информации по roadmap от Angular Team&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular roadmap</title>
+      <link>https://angular.fun/post/2020-08-06-angular-roadmap/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/post/2020-08-06-angular-roadmap/</guid>
+      <description>&lt;p&gt;На страницах angular.io появилась страница с roadmap (&lt;a href=&#34;https://angular.io/guide/roadmap&#34;&gt;https://angular.io/guide/roadmap&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Make Angular faster</title>
+      <link>https://angular.fun/post/2020-07-22-make-angular-faster/</link>
+      <pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/post/2020-07-22-make-angular-faster/</guid>
+      <description>&lt;p&gt;Nrwl представила утилиту которая позволит пересобирать проект быстрее. Суть в том что билды складываются в кэш. Бесплатно для использования в локалке, и так же есть возможность закидывать в cloud чтобы шарить билды между командой. (5часов сборки в месяц бесплатно).&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Angular Deno render engine</title>
       <link>https://angular.fun/post/2020-07-03-angular-deno/</link>
