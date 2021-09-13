@@ -6,7 +6,103 @@
     <language>en-us</language>
     
     
-    <updated>Sat, 11 Apr 2020 00:00:00 UTC</updated>
+    <updated>Fri, 03 Jul 2020 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Angular Deno render engine</title>
+      <link>https://angular.fun/post/2020-07-03-angular-deno/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-07-03-angular-deno/</guid>
+      <description>В Deno сообществе почему то решили что для SSR удобнее всего брать React, и конечно внедрили JSX как часть Deno.core. И даже появились фреймворки на этой основе. Angular остался немного в сторонке в очередной раз =)
+Поэтому решил совместить deno + angular: Angular Deno Renderer Engine. Сейчас он больше готов для использования как любой другой template engine, например как тот же Handlebars, ejs и тд.
+Сравнение Angular Universal на NodeJS и Deno по времени рендеринга (хотя это практически ничего и не значит):</description>
+    </item>
+    
+    <item>
+      <title>Angular 10 🎉</title>
+      <link>https://angular.fun/post/2020-06-25-angular10/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-06-25-angular10/</guid>
+      <description>🎉 Состоялся релиз Angular 10.0.0
+ Updating to Angular version 10 Deprecated APIs and features  И традиционный пост от Stephen Fluin в Angular blog: Version 10 of Angular Now Available
+ng update @angular/core @angular/cli </description>
+    </item>
+    
+    <item>
+      <title>Angular forms strict type</title>
+      <link>https://angular.fun/post/2020-06-10-angular-forms/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-06-10-angular-forms/</guid>
+      <description>На прошлой неделе команда Angular объявила что начнет, наконец то, заниматься типизацией форм. И вот буквально вчера все предложения по типизации были объедены в отдельный milestone Каждое предложение будут рассматривать отдельно, сроков конечно же не дали.
+Изменения затронут: ControlValueAccessor, AbstractControl, formState и т.д.</description>
+    </item>
+    
+    <item>
+      <title>Angular nation now!</title>
+      <link>https://angular.fun/post/2020-05-08-angular-nation/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-05-08-angular-nation/</guid>
+      <description>После двух лет разработки, появился вот такой замечательный портал, соцсеть, по Angular.
+Уже сейчас вы там можете найти себе бесплатные курсы по Angular, и более плотно пообщаться с Angular GDE, Coloborator и Core team.
+А так же подключиться онлайн к различным митапам и воркшопам.
+А еще мы там завели специальный уголок для подкаста ngRuAir. Обязательно присоединяйтесь, чтобы быть в курсе событий, ведь теперь круг докладчиков ngRuAir станет гораздо больше.
+https://www.angularnation.net/</description>
+    </item>
+    
+    <item>
+      <title>Angular dev with deno</title>
+      <link>https://angular.fun/post/2020-05-04-angular-deno/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-05-04-angular-deno/</guid>
+      <description>Вот и Angular добрался до deno. A именно, dev_server.
+Как он работает? При обращении на index.html, запрашивается main.ts,
+Он же транспаилится (в соответствии с заданным tsconfig), и выдает готовый js код по этому url.
+Что с зависимостями?
+А вот тут конечно приходит на помощь jspm, cdn.pika, unpkg. Поэтому вам придется указать соответствующий importmap.
+В итоге у вас на выходе JIT как оно и было во времена systemjs v0.. и 5мб кода.</description>
+    </item>
+    
+    <item>
+      <title>Architects book</title>
+      <link>https://angular.fun/post/2020-04-20-architects-book/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-04-20-architects-book/</guid>
+      <description>Часто спрашивают про то как делать хорошее Angular приложение, какую архитектуру заложить. Тут Manfred Steyer опубликовал бесплатно свою книгу Enterprise Angular Так же внутри есть подписка на всякие онлайн воркшопы
+https://www.angulararchitects.io/book</description>
+    </item>
+    
+    <item>
+      <title>Что было на ngConf</title>
+      <link>https://angular.fun/post/2020-04-13-ng-conf-news/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-04-13-ng-conf-news/</guid>
+      <description>А теперь немного выдержки того что было на ng-conf из нового
+▪️ HOC
+export function extend(aComponent: AComponent) { class DynamicComonent implements OnInit { /* .. */}; DynamicComonent.ɵcpm = ɵɵdefineComponent ({/* wraps AComponent */}); return DynamicComonent; } ▪️ Standalone Components, Dependencies are provided directly in directiveDefs fields
+export class AComponent {/* ... */} AComponent.ɵcpm = /* private API */ AComponent.ɵcpm.directiveDefs = [OtherComponent.ɵcmp]; ▪️ Angular 9 Universal
+ng run app:prerender
+▪️ RxJS: ⚠️ toPromise() deprecated, use lastValueFrom(source$)</description>
+    </item>
+    
+    <item>
+      <title>Делаем Angular снова меньше!</title>
+      <link>https://angular.fun/post/2020-04-12-ng-elements/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2020-04-12-ng-elements/</guid>
+      <description>Делаем Angular снова меньше!
+Интересная попытка скрестить lit-element и angular elements PolymerLabs/angular-element
+Которая к тому же поможет избавиться от огромных бандлов в стандартной обертке AngularElements.
+На данный момент следуя стандартному руководству в angular.io конечный бандл Angular Element будет занимать 65kb.
+Для сравнения, бандл lit-element весит 6.98kb (All the Ways to Make a Web Component - конечно же Angular не попал в эту сравнительную таблицу). Как я уже писал можно предельно ужать рантайм и в 256b</description>
+    </item>
     
     <item>
       <title>Online Angular Events</title>
@@ -72,81 +168,6 @@ But with Angular Ivy we will be able to dynamically load the language.&lt;/p&gt;
       <guid>https://angular.fun/events/meetup/2020-02-28-angular-belarus/</guid>
       <description>📌 “Mighty Decorators in Typescript” - what could we get out of it? Валентин Кононов, Fullstack Engineer, Mapbox
 📌 “Going nuts inside Ivy” Никита Полторацкий, Fullstack Engineer, Akveo</description>
-    </item>
-    
-    <item>
-      <title>Angular Berlin</title>
-      <link>https://angular.fun/events/meetup/2020-01-23-angular-berlin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-01-23-angular-berlin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular Berlin</title>
-      <link>https://angular.fun/events/meetup/2020-02-04-angular-berlin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-02-04-angular-berlin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular Bogota</title>
-      <link>https://angular.fun/events/meetup/2020-03-04-angular-bogota/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-03-04-angular-bogota/</guid>
-      <description>⭐️ ¿Por qué debes actualizar a Angular 9? ⭐️
-👨🏻‍💻 SPEAKER: Alfonso Andrés López Molina - @osnoser1
-👉 BIO: Desarrollador de Software Venezolano con más de 7 años de experiencia y uso de Angular desde versiones tempranas del desarrollo, con aportes a la comunidad @ngVenezuela y a proyectos como @ngrx/platform, ngx-datatable, ngx-auth, etc.
-💼 DESCRIPCIÓN: La espera ha culminado, conoce todas las novedades y mejoras de rendimiento que vienen con esta nueva versión de Angular y que te llevarán a actualizar sin pensarlo dos veces.</description>
-    </item>
-    
-    <item>
-      <title>Angular Colorado</title>
-      <link>https://angular.fun/events/2020-angular-colorado/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/2020-angular-colorado/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular Costa Rica</title>
-      <link>https://angular.fun/events/meetup/2020-03-06-angular-costa-rica/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-03-06-angular-costa-rica/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular DC</title>
-      <link>https://angular.fun/events/meetup/2020-02-12-angular-dc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-02-12-angular-dc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular Halifax</title>
-      <link>https://angular.fun/events/meetup/2020-02-26-angular-halifax/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-02-26-angular-halifax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Angular IL</title>
-      <link>https://angular.fun/events/meetup/2020-01-14-angular-il/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/events/meetup/2020-01-14-angular-il/</guid>
-      <description></description>
     </item>
     
   </channel>

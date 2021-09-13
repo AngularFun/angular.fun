@@ -5,11 +5,7 @@
     <link>https://angular.fun/events/meetup/</link>
     <description>Recent content in Meetups 2020 on Angular Fun</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://angular.fun/events/meetup/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://angular.fun/events/meetup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular Abuja</title>
       <link>https://angular.fun/events/meetup/2020-02-08-angular-abuja/</link>
@@ -187,7 +183,7 @@ By making a deep dive into a very advanced real-world example, one will experien
       <guid>https://angular.fun/events/meetup/2020-02-18-angular-lyon/</guid>
       <description>📝 Programme :
 1️⃣ My journey into mobile and how I fell in love with Ionic
-I was an only developer at a company that had to do lots of native android and iOS apps and there&#39;s only so much you can do. 10 years ago I discovered hybrid web apps and this changed everything for me.
+I was an only developer at a company that had to do lots of native android and iOS apps and there&amp;rsquo;s only so much you can do. 10 years ago I discovered hybrid web apps and this changed everything for me.
 📢Tobias Kausch
 🐦@tobikabla
  2️⃣ Rethinking Cross-Platform
@@ -262,9 +258,9 @@ Building &amp;ldquo;cross-platform&amp;rdquo; apps is often a loaded term.</desc
       <guid>https://angular.fun/events/meetup/2020-01-21-angular-nyc/</guid>
       <description>🕒 6:45 - Nir Kaufman
 🎤 Extendable Shared Components Techniques
-Let&#39;s revisit conventional and less-known techniques for building reusable, extendable Angular UI components with content projection, dynamic templates, and declarative directives.
+Let&amp;rsquo;s revisit conventional and less-known techniques for building reusable, extendable Angular UI components with content projection, dynamic templates, and declarative directives.
 🕒 7:20 - Jason Jean (http://Nx.dev &amp;amp; Nrwl.io)
-🎤 What&#39;s new in Nx?
+🎤 What&amp;rsquo;s new in Nx?
 Nx is an extensible devtool that helps you develop like Google, Microsoft, and Facebook by using a monorepo. In the last year, a ton of new features have been added.</description>
     </item>
     
@@ -294,8 +290,8 @@ Learn how to get started with Electron and Angular (Create a Win, Mac, &amp;amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://angular.fun/events/meetup/2020-01-23-angular-portland/</guid>
-      <description>Angular 9 is here! (Well, technically it will be here sometime before this meetup occurs.) It&#39;s a HUGE DEAL, so we want to help you get prepped!
-We&#39;re celebrating Angular 9 and our new co-organizer Brian Love with an information-packed meetup all about Angular 9.
+      <description>Angular 9 is here! (Well, technically it will be here sometime before this meetup occurs.) It&amp;rsquo;s a HUGE DEAL, so we want to help you get prepped!
+We&amp;rsquo;re celebrating Angular 9 and our new co-organizer Brian Love with an information-packed meetup all about Angular 9.
 Sam Julien will kick us off by speaking on how you can successfully prepare for and migrate to Angular 9. Then, Brian will talk about all the amazing new features of Angular 9, including the highly anticipated Ivy renderer!</description>
     </item>
     
@@ -359,7 +355,7 @@ How many of us have struggled to improve our lighthouse scores? How many of us n
       
       <guid>https://angular.fun/events/meetup/2020-02-25-angular-utah/</guid>
       <description>Rogelio Flores - PWAs + Angular
-No, we&#39;re not talking about politics when we talk about Progressive Web Apps (PWAs). We will be talking about how to create your own PWA, and what tools the Angular ecosystem provides to make it easier for you to create them. PWAs aim to provide a user experience on web apps similar to native apps. Specifically, PWAs should provide offline rendering and offline-first storage, app-like installation, besides being responsive.</description>
+No, we&amp;rsquo;re not talking about politics when we talk about Progressive Web Apps (PWAs). We will be talking about how to create your own PWA, and what tools the Angular ecosystem provides to make it easier for you to create them. PWAs aim to provide a user experience on web apps similar to native apps. Specifically, PWAs should provide offline rendering and offline-first storage, app-like installation, besides being responsive.</description>
     </item>
     
     <item>
@@ -368,7 +364,7 @@ No, we&#39;re not talking about politics when we talk about Progressive Web Apps
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://angular.fun/events/meetup/2020-03-11-angular-zurich/</guid>
-      <description>Managing Angular Libraries The Angular CLI is a really amazing tool, that simplifies all the non-development bits of software development in Angular applications. It&#39;s not just for applications though - it can also be used for managing shared libraries! We&#39;re going to have a look at one way of setting this up. We&#39;ll cover using schematics for consistency between libraries, as well as the development workflow, testing, and deploying to NPM via Jenkins.</description>
+      <description>Managing Angular Libraries The Angular CLI is a really amazing tool, that simplifies all the non-development bits of software development in Angular applications. It&amp;rsquo;s not just for applications though - it can also be used for managing shared libraries! We&amp;rsquo;re going to have a look at one way of setting this up. We&amp;rsquo;ll cover using schematics for consistency between libraries, as well as the development workflow, testing, and deploying to NPM via Jenkins.</description>
     </item>
     
     <item>
@@ -424,8 +420,8 @@ No, we&#39;re not talking about politics when we talk about Progressive Web Apps
       
       <guid>https://angular.fun/events/meetup/2020-03-04-angular-atl/</guid>
       <description>EVENT DETAILS:
-&amp;ldquo;GraphQL: What&#39;s all the fuss anyway?&amp;rdquo; by Josh Oppenheim
-GraphQL is already being used by many teams of all sizes to clearly and efficiently get applications precisely the data they need from potentially many APIs. Together we&#39;ll learn the basics of GraphQL - What it&#39;s for, what benefits it could bring to your app, when you should use it, and how to incrementally incorporate GraphQL into your organization&#39;s tech stack.</description>
+&amp;ldquo;GraphQL: What&amp;rsquo;s all the fuss anyway?&amp;rdquo; by Josh Oppenheim
+GraphQL is already being used by many teams of all sizes to clearly and efficiently get applications precisely the data they need from potentially many APIs. Together we&amp;rsquo;ll learn the basics of GraphQL - What it&amp;rsquo;s for, what benefits it could bring to your app, when you should use it, and how to incrementally incorporate GraphQL into your organization&amp;rsquo;s tech stack.</description>
     </item>
     
     <item>
@@ -465,12 +461,21 @@ GraphQL is already being used by many teams of all sizes to clearly and efficien
     </item>
     
     <item>
+      <title>ngKyiv</title>
+      <link>https://angular.fun/events/meetup/2020-03-12-ng-kyiv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/meetup/2020-03-12-ng-kyiv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ngPittsburgh</title>
       <link>https://angular.fun/events/meetup/2020-01-22-ng-pittsburgh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://angular.fun/events/meetup/2020-01-22-ng-pittsburgh/</guid>
-      <description>Angular 9 is in its final release candidate phases. We expect a stable release between now and Jan 22, 2020. Unlike traditional ngPittsburgh Meetups - we&#39;re going to have multiple speakers speaking on individual features that are coming with Angular 9.</description>
+      <description>Angular 9 is in its final release candidate phases. We expect a stable release between now and Jan 22, 2020. Unlike traditional ngPittsburgh Meetups - we&amp;rsquo;re going to have multiple speakers speaking on individual features that are coming with Angular 9.</description>
     </item>
     
     <item>

@@ -6,11 +6,7 @@
     <description>Recent content in ivy on Angular Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://angular.fun/tags/ivy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/ivy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular Ivy lazy load components</title>
       <link>https://angular.fun/post/2020-01-25-angular-ivy-load-components/</link>

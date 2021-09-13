@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>angularday - Angular Fun</title>
+  <title>Angular Deno render engine - Angular Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="keywords" content="">
-  <link rel="canonical" href="https://angular.fun/events/2019/2019-angular-day/">
+  <link rel="canonical" href="https://angular.fun/post/2020-07-03-angular-deno/">
 
   
   
@@ -47,43 +47,41 @@
   <div class="post p2 p-responsive wrap" role="main">
     <div class="measure">
       <div class="post-header mb2">
-        <h1>angularday</h1>
+        <h1 class="py2">Angular Deno render engine</h1>
+        <span class="post-meta">Jul 3, 2020 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
         
-        <h4>
-          June 14th 2019
-        </h4>
-
-        <p>
-          🇮🇹 Italy, Verona
-        </p>
-
-        <p>
-          <a href="https://twitter.com/@angularday">@angularday</a>
-        </p>
-        <p>
-          <a href="https://2019.angularday.it/">https://2019.angularday.it/</a>
-        </p>
-      </div>
-
-      <div>
-
       </div>
 
       <article class="post-content">
-      <h3 id="talks">Talks</h3>
+        <p>В Deno сообществе почему то решили что для SSR удобнее всего брать React, и конечно внедрили JSX как часть Deno.core. И даже появились фреймворки на этой основе. Angular остался немного в сторонке в очередной раз =)</p>
+<p>Поэтому решил совместить deno + angular: <a href="https://github.com/alosaur/angular_deno">Angular Deno Renderer Engine</a>.
+Сейчас он больше готов для использования как любой другой template engine, например как тот же Handlebars, ejs и тд.</p>
+<p>Сравнение Angular Universal на NodeJS и Deno по времени рендеринга (хотя это практически ничего и не значит):</p>
 <ul>
-<li>Sam Bellen - Knock knock, who&rsquo;s there? Authenticating your single page apps using JSON Web Tokens</li>
-<li>Önder Ceylan - Level up your NgRx game</li>
-<li>Zack Chapple - Adventures in Node and Ne</li>
-<li>Stephen Fluin - What&rsquo;s new in 8.0 (live streamin</li>
-<li>Elena Gancheva - Elegance of Movement with Reactive Angular Animation</li>
-<li>Francesco Leardini - Offline web applications don&rsquo;t exist anymore!</li>
-<li>Keilla Menezes - To be reactive, that&rsquo;s the answer!</li>
-<li>Tomas Trajan - Total Guide To Custom Angular Schemat</li>
+<li>Deno 1.1.2 Angular JIT:  3-8ms</li>
+<li>Node 12.18.2 Angular JIT:  15-24ms</li>
+<li>Node 12.18.2 Angular AOT: 5-13ms</li>
 </ul>
-<p><a href="https://2019.angularday.it/talks.html">https://2019.angularday.it/talks.html</a></p>
+<p>Если у сообщества Angular будет достаточный интерес к этому проекту, то далее буду внедрять:</p>
+<ul>
+<li>Transfer State, (чтобы был прям настоящий SSR)</li>
+<li>Compiler на Deno, для AOT</li>
+<li>Поддержка различных препроцессоров</li>
+<li>Пререндер как в Scully</li>
+<li>HMR</li>
+</ul>
+<p><a href="https://github.com/alosaur/angular_deno">https://github.com/alosaur/angular_deno</a></p>
 
       </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
 
       
 
@@ -125,4 +123,3 @@ if (!doNotTrack) {
 
 </body>
 </html>
-

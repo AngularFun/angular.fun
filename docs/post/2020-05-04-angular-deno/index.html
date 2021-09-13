@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>angularday - Angular Fun</title>
+  <title>Angular dev with deno - Angular Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="keywords" content="">
-  <link rel="canonical" href="https://angular.fun/events/2019/2019-angular-day/">
+  <link rel="canonical" href="https://angular.fun/post/2020-05-04-angular-deno/">
 
   
   
@@ -47,43 +47,35 @@
   <div class="post p2 p-responsive wrap" role="main">
     <div class="measure">
       <div class="post-header mb2">
-        <h1>angularday</h1>
+        <h1 class="py2">Angular dev with deno</h1>
+        <span class="post-meta">May 4, 2020 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
         
-        <h4>
-          June 14th 2019
-        </h4>
-
-        <p>
-          🇮🇹 Italy, Verona
-        </p>
-
-        <p>
-          <a href="https://twitter.com/@angularday">@angularday</a>
-        </p>
-        <p>
-          <a href="https://2019.angularday.it/">https://2019.angularday.it/</a>
-        </p>
-      </div>
-
-      <div>
-
       </div>
 
       <article class="post-content">
-      <h3 id="talks">Talks</h3>
-<ul>
-<li>Sam Bellen - Knock knock, who&rsquo;s there? Authenticating your single page apps using JSON Web Tokens</li>
-<li>Önder Ceylan - Level up your NgRx game</li>
-<li>Zack Chapple - Adventures in Node and Ne</li>
-<li>Stephen Fluin - What&rsquo;s new in 8.0 (live streamin</li>
-<li>Elena Gancheva - Elegance of Movement with Reactive Angular Animation</li>
-<li>Francesco Leardini - Offline web applications don&rsquo;t exist anymore!</li>
-<li>Keilla Menezes - To be reactive, that&rsquo;s the answer!</li>
-<li>Tomas Trajan - Total Guide To Custom Angular Schemat</li>
-</ul>
-<p><a href="https://2019.angularday.it/talks.html">https://2019.angularday.it/talks.html</a></p>
+        <p>Вот и Angular добрался до deno. A именно, <a href="https://github.com/zhmushan/dev_server">dev_server</a>.</p>
+<p>Как он работает?
+При обращении на index.html, запрашивается main.ts,</p>
+<p>Он же транспаилится (в соответствии с заданным tsconfig), и выдает готовый js код по этому url.</p>
+<p>Что с зависимостями?</p>
+<p>А вот тут конечно приходит на помощь jspm, cdn.pika, unpkg. Поэтому вам придется указать соответствующий importmap.</p>
+<p>В итоге у вас на выходе JIT как оно и было во времена systemjs v0.. и 5мб кода.
+Из плюсов, вам не придется ждать пока произойдет dev сборка у вас в консоли.</p>
+<p>Но тут конечно же не учтены различные препроцессоры, о которых сейчас большинство из нас  даже не задумывается, используя Angular CLI</p>
+<p>Как попробовать:</p>
+<pre tabindex="0"><code>deno run --allow-net --allow-read --allow-write --unstable https://deno.land/x/dev_server/mod.ts --template angular
+</code></pre><p>(Предварительно должен быть установлен Deno не ниже v0.42.0)</p>
 
       </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
 
       
 
@@ -125,4 +117,3 @@ if (!doNotTrack) {
 
 </body>
 </html>
-

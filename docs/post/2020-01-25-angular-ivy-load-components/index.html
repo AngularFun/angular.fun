@@ -61,7 +61,7 @@
 <p>Kevin Kreuzer
 <a href="https://twitter.com/kreuzercode">@kreuzercode</a></p>
 <p>Lazy loading modules with the Angular router!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">QuizCardComponent</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;./quiz-card/quiz-card.component&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">QuizCardComponent</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;./quiz-card/quiz-card.component&#39;</span>);
 
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">quizCardFactory</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">cfr</span>.<span style="color:#a6e22e">resolveComponentFactory</span>(<span style="color:#a6e22e">QuizCardComponent</span>);
 <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">instance</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">quizContainer</span>.<span style="color:#a6e22e">createComponent</span>(
@@ -74,21 +74,21 @@
 <p>Netanel Basal <a href="https://twitter.com/NetanelBasal">@NetanelBasal</a></p>
 <p>A simple and quick example of lazy load components with Ivy</p>
 <p><a href="https://ng-run.com/edit/abHkVcNVQeDAX28ypUsD?open=app%2Fapp.component.ts">Demo</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Component</span>, <span style="color:#a6e22e">Type</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/core&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">TodoComponent</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./todo/todo.component&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Component</span>, <span style="color:#a6e22e">Type</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/core&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">TodoComponent</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./todo/todo.component&#39;</span>;
 
 <span style="color:#66d9ef">@Component</span>({
   <span style="color:#a6e22e">selector</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;my-app&#39;</span>,
-  <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">
+  <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`
 </span><span style="color:#e6db74">    &lt;ng-template [ngComponentOutlet]=&#34;comp | async&#34;&gt;&lt;/ng-template&gt;
 </span><span style="color:#e6db74">    &lt;button (click)=&#34;show()&#34;&gt;Show&lt;/button&gt;
-</span><span style="color:#e6db74">  </span><span style="color:#e6db74">`</span>
+</span><span style="color:#e6db74">  `</span>
 })
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppComponent</span> {
-  <span style="color:#a6e22e">comp</span>: <span style="color:#66d9ef">Promise</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Type</span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">TodoComponent</span><span style="color:#f92672">&gt;&gt;</span>;
+  <span style="color:#a6e22e">comp</span>: <span style="color:#66d9ef">Promise</span>&lt;<span style="color:#f92672">Type</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">TodoComponent</span>&gt;<span style="color:#f92672">&gt;</span>;
 
   <span style="color:#a6e22e">show() {</span>
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">comp</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;./todo/todo.component&#39;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">TodoComponent</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">comp</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">import</span>(<span style="color:#e6db74">&#39;./todo/todo.component&#39;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">m</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">m</span>.<span style="color:#a6e22e">TodoComponent</span>);
   }
 }
 </code></pre></div>

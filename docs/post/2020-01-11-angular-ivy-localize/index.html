@@ -63,18 +63,18 @@ But with Angular Ivy we will be able to dynamically load the language.</p>
 <p>Cédric Exbrayat
 <a href="https://twitter.com/cedric_exbrayat">@cedric_exbrayat</a></p>
 <p>i18n in templates, as with previous versions of Angular, with attribute i18n</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">i18n</span>&gt;Hello&lt;/<span style="color:#f92672">h1</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">i18n</span>&gt;Hello&lt;/<span style="color:#f92672">h1</span>&gt;
 </code></pre></div><p>i18n with $localize in TypeScript code.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Component</span>({
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Component</span>({
   <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;{{ title }}&#39;</span>
 })
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeComponent</span> {
-  <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$localize</span><span style="color:#e6db74">`</span><span style="color:#e6db74">Hi </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:name:! You have </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:userCount: users.</span><span style="color:#e6db74">`</span>;
+  <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$localize</span><span style="color:#e6db74">`Hi </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:name:! You have </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:userCount: users.`</span>;
 }
 </code></pre></div><p>Runtime translations</p>
 <p>You can load your translations in polyfills.ts with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;@angular/localize/init&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">loadTranslations</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/localize&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;@angular/localize/init&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">loadTranslations</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/localize&#39;</span>;
 
 <span style="color:#a6e22e">loadTranslations</span>({
   <span style="color:#e6db74">&#39;1815172606781074132&#39;</span><span style="color:#f92672">:</span>
@@ -86,20 +86,20 @@ But with Angular Ivy we will be able to dynamically load the language.</p>
 <p>Manfred Steyer <a href="https://twitter.com/ManfredSteyer">@ManfredSteyer</a></p>
 <p>Before:</p>
 <p>main.ts</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">registerLocaleData</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common&#39;</span>;
-<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">localeDe</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common/locales/de&#39;</span>;
-<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">localeDeAt</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common/locales/de-AT&#39;</span>;
-<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">localeEs</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/common/locales/es&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">registerLocaleData</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/common&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">localeDe</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/common/locales/de&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">localeDeAt</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/common/locales/de-AT&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">localeEs</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/common/locales/es&#39;</span>;
 
 <span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeDe</span>); <span style="color:#75715e">// de-DE
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeDeAt</span>); <span style="color:#75715e">// de-AT
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">registerLocaleData</span>(<span style="color:#a6e22e">localeEs</span>); <span style="color:#75715e">// es-ES
 </span></code></pre></div><p>After:</p>
 <p>Global locales (<code>global.ng.common.locales</code>)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"> <span style="color:#a6e22e">loader</span>.<span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#39;assets/de.js&#39;</span>)
-  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">_</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lang</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;de-DE&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"> <span style="color:#a6e22e">loader</span>.<span style="color:#a6e22e">loadScript</span>(<span style="color:#e6db74">&#39;assets/de.js&#39;</span>)
+  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">_</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lang</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;de-DE&#39;</span>)
 
-  <span style="color:#f92672">--</span><span style="color:#f92672">-</span>
+  <span style="color:#f92672">---</span>
 
   {{ <span style="color:#a6e22e">date</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">date</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;long&#39;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">:</span><span style="color:#a6e22e">lang</span> }}
 </code></pre></div><hr>
@@ -110,24 +110,24 @@ But with Angular Ivy we will be able to dynamically load the language.</p>
 <h4 id="locl-cli">Locl CLI</h4>
 <p>Locl CLI - Dev tools to help you with $localize and Angular i18n.</p>
 <p>You can use locl extract to extract translations from your ivy application:</p>
-<pre><code>locl extract -s=dist/apps/demo/*.js -f=json -o=dist/i18n/en.json
+<pre tabindex="0"><code>locl extract -s=dist/apps/demo/*.js -f=json -o=dist/i18n/en.json
 </code></pre><p>Extractor support formats: xlf, xlf2, xmb, json.</p>
 <h4 id="locl-core">Locl Core</h4>
 <p>Locl Core - A library with various utility functions to help you with $localize. Loading the translations at runtime.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">// Load `$localize` onto the global scope.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">// Load `$localize` onto the global scope.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;@angular/localize/init&#39;</span>;
 
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">loadTranslations</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/localize&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">platformBrowserDynamic</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@angular/platform-browser-dynamic&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">getTranslations</span>, <span style="color:#a6e22e">ParsedTranslationBundle</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@locl/core&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AppModule</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./app/app.module&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">loadTranslations</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/localize&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">platformBrowserDynamic</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/platform-browser-dynamic&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">getTranslations</span>, <span style="color:#a6e22e">ParsedTranslationBundle</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@locl/core&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">AppModule</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./app/app.module&#39;</span>;
 
 <span style="color:#a6e22e">getTranslations</span>(<span style="color:#e6db74">&#39;/assets/i18n/fr.json&#39;</span>).<span style="color:#a6e22e">then</span>(
-  (<span style="color:#a6e22e">data</span>: <span style="color:#66d9ef">ParsedTranslationBundle</span>) <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> {
+  (<span style="color:#a6e22e">data</span>: <span style="color:#66d9ef">ParsedTranslationBundle</span>) <span style="color:#f92672">=&gt;</span> {
     <span style="color:#a6e22e">loadTranslations</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">translations</span>);
     <span style="color:#a6e22e">platformBrowserDynamic</span>()
       .<span style="color:#a6e22e">bootstrapModule</span>(<span style="color:#a6e22e">AppModule</span>)
-      .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> <span style="color:#f92672">=</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>));
+      .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>));
   }
 );
 </code></pre></div><p>And this library have 2 util functions:</p>
