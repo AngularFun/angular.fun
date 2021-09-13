@@ -11,6 +11,8 @@ twitter: 'irustm'
 
 Интересная попытка скрестить lit-element и angular elements PolymerLabs/angular-element
 
+<!--more-->
+
 Которая к тому же поможет избавиться от огромных бандлов в стандартной обертке AngularElements.
 
 На данный момент следуя стандартному руководству в angular.io конечный бандл Angular Element будет занимать 65kb.

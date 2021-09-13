@@ -9,6 +9,8 @@ twitter: 'irustm'
 
 Вот и Angular добрался до deno. A именно, [dev_server](https://github.com/zhmushan/dev_server). 
 
+<!--more-->
+
 Как он работает? 
 При обращении на index.html, запрашивается main.ts, 
 

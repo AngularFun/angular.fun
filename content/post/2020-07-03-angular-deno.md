@@ -9,6 +9,9 @@ twitter: 'irustm'
 
 В Deno сообществе почему то решили что для SSR удобнее всего брать React, и конечно внедрили JSX как часть Deno.core. И даже появились фреймворки на этой основе. Angular остался немного в сторонке в очередной раз =) 
 
+<!--more-->
+
+
 Поэтому решил совместить deno + angular: [Angular Deno Renderer Engine](https://github.com/alosaur/angular_deno).
 Сейчас он больше готов для использования как любой другой template engine, например как тот же Handlebars, ejs и тд.
 

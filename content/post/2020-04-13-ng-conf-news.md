@@ -9,6 +9,9 @@ twitter: 'irustm'
 
 А теперь немного выдержки того что было на ng-conf из нового
 
+<!--more-->
+
+
 ▪️ HOC
 ```ts
 export function extend(aComponent: AComponent) {
