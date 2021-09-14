@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Qwik - новый фреймворк от создателя Angular. - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2021-06-03-qwik/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Qwik - новый фреймворк от создателя Angular.</h1>
+        <span class="post-meta">Jun 3, 2021 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>🥳 Qwik- новый фреймворк от создателя Angular. Пока есть только концепт, нигде ничего  не анонсировалось, все что удалось собрать по github&rsquo;у расписал ниже.</p>
+<p>Уже все наверно знают что отец создатель Angular - Misko Hevery покинул Google 4 мая после 15 лет работы в нем. Ну вот так вот бывает, засиделся я бы даже сказал. Но внезапно я тут обнаружил что готовился к этому уходу еще давно, и начал разрабатывать свой проект в начале этого года, а то что он ушел в BuilderIO, ну так получилось, возможно.</p>
+<p>Вопрос, и что же будет там делать человек с таким большим опытом разработки фреймворка? Да, новый фреймворк!</p>
+<p>Фреймворк с большим упором на <a href="https://web.dev/interactive/">Time to Interactive</a>, возобновляемый ssr, lazy load.
+Это значит что браузеру не нужно будет тратить время на bootstrap приложения, парсинг js, регидрация и прочая магия чтобы отобразить валидную страницу. Звучит как просто выплевывание наружу чистого html, казалось бы, интернет так появился, что тут нового. Да, все это DOM, DOM центральная часть фреймворка, а все остальное это атрибуты. Ну тут самые старые из вас скажут, да этож JQuery.</p>
+<p>Вся суть:</p>
+<ul>
+<li>template - в jsx, забирать их через qrl('./path')</li>
+<li>render - jsx, не понятно, будет ли еще что либо</li>
+<li>никаких декораторов</li>
+<li>есть DI, provider на уровне каждого элемента</li>
+<li>собирать это все через bazel</li>
+<li>опять медленный terser,</li>
+<li>ssr - domino, express</li>
+<li>Entity state, component</li>
+<li>с querySelectorAll можно забрать любой компонент</li>
+</ul>
+<p>Примеры:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
+Указывает на то что есть provider к элементу → 
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">::user</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;qrl_to_entity&#34;</span>&gt; 
+Input → 
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">:user:some_user_id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{&#34;fullName&#34;: &#34;Joe Someone&#34;, &#34;age&#34;: 20}&#39;</span>&gt;
+Output → 
+&lt;<span style="color:#f92672">some-component</span> <span style="color:#a6e22e">on:click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;qrl_to_handler&#34;</span>&gt;
+Binding → 
+&lt;<span style="color:#f92672">some-component</span> <span style="color:#a6e22e">bind:user:some_user_id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;$user&#34;</span>&gt;
+
+lazy load template
+
+&lt;<span style="color:#f92672">div</span>&gt;
+parent component
+&lt;<span style="color:#f92672">child</span> <span style="color:#a6e22e">decl:template</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./path_to_child_component_render_function&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>→ <a href="https://github.com/BuilderIO/qwik/tree/main/integration/todo">TODO</a> app</p>
+<p>Похоже что то на смесь AngularJs + React + Knockout, не понятно насколько это ок.
+И вообще - Qwik is a different kind of framework. Напишите свое мнение в комментариях.</p>
+<p>Github <a href="https://github.com/BuilderIO/qwik/blob/main/docs/MENTAL_MODEL.md">Qwik</a></p>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2021<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>

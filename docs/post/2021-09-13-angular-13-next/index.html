@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>🅰️ Что нам готовит Angular 13. - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2021-09-13-angular-13-next/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">🅰️ Что нам готовит Angular 13.</h1>
+        <span class="post-meta">Aug 18, 2021 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>Пока изменений на первый взгляд не так уж и много, думаю добавят много при 13.1+2 как это было с 12. Я бы назвал что релиз Angular 13 это про окончательный дроп IE.</p>
+<p><strong>Angular:</strong></p>
+<ul>
+<li>Поддержка number separators:</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Form status протипизировали</li>
+<li>Forms: Добавили методы hasValidators, addValidators, и removeValidators</li>
+</ul>
+<p><strong>Angular/CLI:</strong></p>
+<ul>
+<li>webpack-dev-server upgrade в 4 версию</li>
+<li>deprecate deployUrl</li>
+<li>esbuild для оптимизации css глобальных стилей</li>
+<li>
+<!-- raw HTML omitted -->
+</li>
+<li>так как IE все, удалили сборку под es5, и из полифилов убрали</li>
+<li>extractCss убрали флаг и удалили не нужный loader, теперь css всегда extract</li>
+<li>inline google шрифтов тоже удалили в woff, (ну из за IE)</li>
+<li>удалены: node-sass, tslint</li>
+</ul>
+<p><strong>Angular/components:</strong></p>
+<ul>
+<li>datepicker: добавлены material-date-fns-adapter и material-luxon-adapter, ранее был только moment-adapter</li>
+<li>CdkOverlay: расширение, поддержка больше типов, x,y</li>
+<li>cdk/table: добавили output event когда таблица отрендерена,</li>
+<li>virtualScroll: добавили флаг appendOnly, за счет чего не будут удалятся элементы из поля зрения, при необходимости.</li>
+<li>dialog: autofocus к определенному field</li>
+</ul>
+<p>ну и много fix, которых долго ждали.</p>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2021<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>

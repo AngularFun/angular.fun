@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Build Large Angular apps - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2020-11-03-angular-build/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Build Large Angular apps</h1>
+        <span class="post-meta">Nov 3, 2020 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>В статье статистика на чем сейчас собирают внутри, и какие инструменты есть для сборки Angular приложений.</p>
+<p>Статья: <a href="https://blog.nrwl.io/on-bazel-support-6be3b3ceba29">Nx: On Bazel Support</a></p>
+<p><strong>Computation Caching</strong></p>
+<p>Основной фишкой внедрения Bazel в Nx была реализация распределенной сборки, но эта задача была полностью решена на стороне Nx, поэтому Bazel в Nx не будет.</p>
+<p>Bazel and Angular</p>
+<p>Действительно после ухода Alex Eagle из Google, больше нет никого кто бы работал с rules_nodejs из Google, Angular в частности, и поэтому как считает Victor Savkin, Bazel team не будут уделять большое внимание на частные проблемы при интеграции с Angular. Считаю что это не так, поскольку Bazel(rules_nodejs) для сборки используется в самом Angular, и других крупных проектах: TensorflowJs, Selenium, NgRX, и тд.</p>
+<p>Кстати, недавно появился rules_python.</p>
+<p>Bazel or Nx</p>
+<p>Bazel хорошая технология, но плохо работает с js тулами. В статье много отсылок к тому что с Nx можно собирать что угодно, и сделать какой угодно сборщик зная в основном только TS.</p>
+<p><strong>Опрос по сборщикам Angular:</strong></p>
+<p>А что вы используете при сборке? <a href="https://t.me/ngFanatic/189">https://t.me/ngFanatic/189</a></p>
+<ul>
+<li>1% Bazel</li>
+<li>9% Nx CLI</li>
+<li>80% Angular CLI</li>
+<li>9% webpack config</li>
+<li>1% other</li>
+</ul>
+<hr>
+<p><strong>Что насчет поддержки различных сборок?</strong></p>
+<p>В настоящее время каких либо <a href="https://github.com/angular/angular-cli/issues/18599#issuecomment-678771369">планов</a> чтобы отклониться у Angular team от webpack нет, и реализуется поддержка новой версии. Но тем не менее есть поддержка rollup от сообщества Angular Ivy, rollup-plugin-ngc (Есть и старший брат - angular2-rollup , но проект сейчас не поддерживается, для примера реализации собственного сборщика ок)</p>
+<p>У rollup-plugin-ngc под капотом:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">createProgram</span>, <span style="color:#a6e22e">CompilerHost</span>  } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/compiler-cli&#39;</span>
+</code></pre></div><p>Конечно, этот плагин практически ничего не дает, для крупных приложений, но для Angular Elements почему бы нет? Тут даже <a href="https://github.com/aelbore/rollup-plugin-ngc/tree/master/example">пример есть</a></p>
+<p>Есть у некоторых идеи еще попробовать сделать сборщик на основе vite, ориентирован прежде всего на vue и react. Вроде обещает быть быстрым, который в свою очередь соревнуется с Snowpack.</p>
+<p>Напишите в комментариях, довольны ли временем сборки вашего проекта?
+(Если нет, то можете следить за этим issue)</p>
+<hr>
+<p><strong>Inspector for Angular</strong></p>
+<p>Для тех у кого пересборка serve занимает значительное время, Netanel Basal недавно представил новую утилиту - inspector. Возможность изменения inputs, outputs property в специальном окне.</p>
+<p>Features</p>
+<ul>
+<li>Inspect Angular components on the fly</li>
+<li>Change component properties without touching the code</li>
+<li>Simulate Angular events</li>
+<li>See the results in realtime</li>
+</ul>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2021<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pluggable Angular Architecture with Webpack 5 Module Federation - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2020-11-11-angular-pluggable-architecture/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Pluggable Angular Architecture with Webpack 5 Module Federation</h1>
+        <span class="post-meta">Nov 11, 2020 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>Реализация плагинной архитектуры с Angular 11 станет еще более удобной, с использованием фич Webpack 5. В этом примере Alexey Zuev показывает как это можно будет применить.</p>
+<p>Pluggable Angular Architecture with Webpack 5 Module Federation</p>
+<p>2 года назад <a href="https://www.youtube.com/watch?v=aTnZyu53zSE">я рассказывал</a> на одном из митапов Angular Moscow, про плагинную архитектуру (youtube) как это было во времена AngularJS, и как должно было быть круто с приходом Angular IVY. И вот этот день можно сказать почти настал.</p>
+<p><a href="https://github.com/alexzuza/angular-plugin-architecture-with-module-federation">https://github.com/alexzuza/angular-plugin-architecture-with-module-federation</a></p>
+<p>Реализация плагинной архитектуры с Angular 11 станет еще более удобной, с использованием фич Webpack 5. В этом примере Alexey Zuev показывает как это можно будет применить.</p>
+<p>В основе как всегда есть 3 слоя:</p>
+<ul>
+<li>config плагинов</li>
+<li>loader service</li>
+<li>render</li>
+</ul>
+<p>Но прежде чем загрузить и показать что то, нужно создать что то.
+Для начала необходимо добавить в angular.json конфиг вебака
+<code>&quot;extraWebpackConfig&quot;: &quot;webpack.config.js&quot;</code></p>
+<p>И разметить shared области, чтобы не дублировать код angular/core и остального в плагинах.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ModuleFederationPlugin</span>({
+      <span style="color:#a6e22e">shared</span><span style="color:#f92672">:</span> {
+        <span style="color:#e6db74">&#39;@angular/core&#39;</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">singleton</span>: <span style="color:#66d9ef">true</span>,
+        },
+<span style="color:#75715e">// и тд
+</span></code></pre></div><p>Для создания плагинов будем использовать другой webpack.config и другой проект, в рамках angular library.
+В данном случае 2 плагина будут жить в одном бандле.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ModuleFederationPlugin</span>({
+      <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;plugins&#39;</span>,
+      <span style="color:#a6e22e">library</span><span style="color:#f92672">:</span> { <span style="color:#66d9ef">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;var&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;plugins&#39;</span> },
+      <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;remoteEntry.js&#39;</span>,
+      <span style="color:#a6e22e">exposes</span><span style="color:#f92672">:</span> {
+        <span style="color:#e6db74">&#39;./Plugin1&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./projects/plugins/src/app/plugin1/plugin1.component.ts&#39;</span>,
+        <span style="color:#e6db74">&#39;./Plugin2&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./projects/plugins/src/app/plugin2/plugin2.component.ts&#39;</span>
+      },
+      <span style="color:#a6e22e">shared</span><span style="color:#f92672">:</span> {
+        <span style="color:#e6db74">&#39;@angular/core&#39;</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">singleton</span>: <span style="color:#66d9ef">true</span>,
+</code></pre></div><p>Ну и сам loader service разместившийся в main project (plugin-loader.service.ts) :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">load</span>&lt;<span style="color:#f92672">T</span>&gt;(<span style="color:#a6e22e">pluginName</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">Type</span><span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">T</span>&gt;<span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">mfEntry</span>, <span style="color:#a6e22e">exposedModule</span>, <span style="color:#a6e22e">ngModuleName</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">config</span>[<span style="color:#a6e22e">pluginName</span>];
+    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">loadRemoteEntry</span>(<span style="color:#a6e22e">mfEntry</span>);
+    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">__webpack_init_sharing__</span>(<span style="color:#e6db74">&#39;default&#39;</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">container</span> <span style="color:#f92672">=</span> window[<span style="color:#a6e22e">name</span>] <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">Container</span>;
+
+    <span style="color:#75715e">// Initialize the container, it may provide shared modules
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">container</span>.<span style="color:#a6e22e">init</span>(<span style="color:#a6e22e">__webpack_share_scopes__</span>.<span style="color:#66d9ef">default</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">factory</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">container</span>.<span style="color:#66d9ef">get</span>(<span style="color:#a6e22e">exposedModule</span>);
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Module</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">factory</span>();
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Module</span>[<span style="color:#a6e22e">ngModuleName</span>];
+  }
+</code></pre></div><p>Cоздание компонента после загрузки (app.component.ts):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#a6e22e">loadPlugin</span>(<span style="color:#a6e22e">pluginName</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">pluginLoader</span>.<span style="color:#a6e22e">load</span>(<span style="color:#a6e22e">pluginName</span>).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">component</span>: <span style="color:#66d9ef">Type</span>&lt;<span style="color:#f92672">any</span>&gt;) <span style="color:#f92672">=&gt;</span> {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">compFactory</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">factoryResolver</span>.<span style="color:#a6e22e">resolveComponentFactory</span>(
+        <span style="color:#a6e22e">component</span>
+      );
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vcRef</span>.<span style="color:#a6e22e">createComponent</span>(<span style="color:#a6e22e">compFactory</span>);
+    });
+  }
+</code></pre></div>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2021<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Что будет в Angular 12 - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2021-02-18-angular-12-next/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Что будет в Angular 12</h1>
+        <span class="post-meta">Feb 18, 2021 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>Что нас ждет в Angular 12. Заметки из последних changelog и плана релиза.</p>
+<p>✨ Forms:</p>
+<ul>
+<li>Улучшение min, max валидаторов, ломает html min, max аттрибуты в input, теперь Form начнет триггерить только если в input накинули formControl</li>
+<li>Опция emitEvent добавлена в AbstractControl, поэтому поломаются</li>
+</ul>
+<p>FormGroup.addControl, FormGroup.removeControl, FormGroup.setControl, FormArray.push, FormArray.insert, FormArray.removeAt, FormArray.setControl, FormArray.clear</p>
+<p>но миграция ng update их устранит. Если только вы не делали своих наследников от AbstractControl и далее.</p>
+<p>✨Http:</p>
+<ul>
+<li>Наконец то затипизировали http статусы и сделали их читаемыми</li>
+<li>Зафиксили и добавили request timeout, до 12 версии видимо никого это не беспокоило, хотя это еще добавили в path версию 11.</li>
+</ul>
+<p>✨language-service:</p>
+<ul>
+<li>5 улучшений, интеграция в vscode будет работать немного лучше в части templates.</li>
+</ul>
+<p>✨common:</p>
+<ul>
+<li>ICU для DatePipe</li>
+</ul>
+<p>Пока все, будем ждать обновленный roadmap и более детальное описание релиза.</p>
+<hr>
+<p>Angular CLI тем временем тоже идет к 12 версии. Уже сейчас доступна предрелизная версия 12.0.0-next.1</p>
+<p>Из интересного:</p>
+<ul>
+<li>Поддержки npm 7 пока НЕ будет. Команда пытается интегрироваться, но фичу блокируют баги самого npm (один, два)</li>
+<li>Добавлена поддержка Webpack 5 (привет, Module Federation!)</li>
+<li>Strict mode при создании приложения или воркспейса по умолчанию включен</li>
+</ul>
+<p>Breaking Changes</p>
+<ul>
+<li>Минимально-поддерживаемая версия Node.js — 12.13</li>
+<li>Удалена поддержка Zone.js 0.10</li>
+<li>Минимально-поддерживаемая версия Karma — 6.0.0</li>
+</ul>
+<hr>
+<ul>
+<li>APP_INITIALIZER научили работать с Observable</li>
+<li>Контракт router-outlet стал публичным, что упростит создание его кастомных имплементаций</li>
+<li>Добавлена поддержка отключения анимации через BrowserAnimationsModule.withConfig</li>
+<li>number и boolean теперь разрешены в качестве http-параметров</li>
+<li>Методы onPopState и onHashChange класса PlatformLocation теперь возвращают функцию, которую можно вызвать для удаления подписки. Благодаря этому исправлено создание лишних подписок при повторном бутстрапинге приложения.</li>
+</ul>
+<p>Angular CLI не отстает:</p>
+<ul>
+<li>Объявлена поддержка npm 7, а если быть точнее то <a href="mailto:npm@7.5.6">npm@7.5.6</a> и выше</li>
+<li>Флаг inlineCritical установлен в true по умолчанию</li>
+<li>Имплементирован новое свойство defaultConfiguration в angular.json. Это может избавить от передачи лишних флагов при сборке проекта. Например, если указать &ldquo;defaultConfiguration&rdquo;: &ldquo;production&rdquo; , то продуктовую сборку можно запустить уже без флага &ndash;prod</li>
+<li>В свою очередь флаг &ndash;prod признан устаревшим. Вместо него следует использовать флаг &ndash;configuration</li>
+<li>IE 11 признан устаревшим и его поддержка будет удалена в следующих релизах</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>common/http: Появился класс HttpContext и HttpContextToken для запросов HttpClient, 4 года ждали эту фичу. Например теперь можно будет дополнительно обработать запрос в interceptor, согласно заданному контексту. Пример</p>
+</li>
+<li>
+<p>common: Удалены не используемые методы в DomAdapter, и если у вас были какие либо специфичные вещи связанные с DominoAdapter то кажется у вас будут проблемы с SSR, например у меня это в angular_deno</p>
+</li>
+<li>
+<p>compiler: :host-context c нормальным multiple наконец то таки, влита уже в 11, как бага</p>
+</li>
+<li>
+<p>platform-browser: XhrFactory  @angular/common/http мигрировал в @angular/common.  Необходимо чтобы можно было настроить токен XhrFactory на уровне платформы, и не тянуть зависимости, а в browser только BrowserXhr  Автоматическая миграция должна пофиксить.</p>
+</li>
+<li>
+<p>compiler: пересборка JIT должна стать чуть быстрее за счет переиспользуемых компонентов</p>
+</li>
+<li>
+<p>common: historyGo в Location service, забавно что принимает number, то есть можно уйти как на 2 шага назад historyGo(-2) так и вперед historyGo(10), но если не сможет, то просто не сработает без всякой ошибки</p>
+</li>
+<li>
+<p>доступна опция forwardRef в  @Injectable({ providedIn: forwardRef(() =&gt; MyModule) })</p>
+</li>
+<li>
+<p>compiler: появился хук transformResource, а это означает что можно писать свои препроцессоры для стилей, с удобным интерфейсом ResourceHostContext, для меня это означает что можно подрубить легко sass для angular_deno</p>
+</li>
+<li>
+<p>compiler: nullish coalescing доступна в Angular templates: {{ a ?? b ?? c}}</p>
+</li>
+<li>
+<p>typescript 4.2</p>
+</li>
+</ul>
+<hr>
+<p>BREAKING</p>
+<ul>
+<li>
+<p>core: Флаг emitDistinctChangesOnly по умолчанию будет выставлен false в ContentChildren, ViewChildren, а так же будет помечен как deprecated. Неободим так как QueryList.changes вызывался лишний раз.</p>
+</li>
+<li>
+<p>animation fix: очистка dom элементов после разрушения AnimationEngine, а это в основном когда root удален, по факту может повлиять на ваши тесты, если вы после destroy проверяете dom элемент</p>
+</li>
+<li>
+<p>core: больше нет поддержки node v10, перешли на использование node v14, минималка v12.14.1</p>
+</li>
+<li>
+<p>ng_packagr: больше не генерит минифицированный umd</p>
+</li>
+</ul>
+<hr>
+<p>C 12 версии Stylus будет deprecated.</p>
+<p>А еще в Angular Material будет переход на sass модули @use вместо @import Если вы используете Angular Material то можете попробовать:
+ng g @angular/material:themingApi</p>
+<hr>
+<p>Традиционный пост на medium:
+<a href="https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49">https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49</a></p>
+<hr>
+<p>По поводу изменений поговорили про Angular 12 на NgRuAir:  <a href="https://www.youtube.com/watch?v=F3FO4I3anQQ">https://www.youtube.com/watch?v=F3FO4I3anQQ</a></p>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2021<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>

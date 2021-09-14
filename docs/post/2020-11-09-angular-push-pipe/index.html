@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Angular push pipe for optimization - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2020-11-09-angular-push-pipe/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Angular push pipe for optimization</h1>
+        <span class="post-meta">Nov 9, 2020 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>Angular Push Pipe - новый способ оптимизации работы Angular приложения без работы zone.js c включенным в проект zone.js
+Обзор 2 статей.</p>
+<p><a href="https://indepth.dev/angulars-push-pipe-part-1">https://indepth.dev/angulars-push-pipe-part-1</a></p>
+<p>Как вы знаете вся магия работы Angular работает исключительно за счет zone.js. (Для тех кто не в курсе, тут есть замечательное объяснение на русском - zone js от а до я). В статье  рассказывается за счет чего работает тот же async pipe, и как собственно работает changeDetection. Приводится много аргументов того что async pipe будет недостаточно производительным в приложениях, где идет большой объем данных, за счет того что этот pipe pure: false и сам внутри смотрит latestValue и вызывая changeDetectionRef.markForCheck() отмечая связанный компонент как dirty (следующее обнаружение изменения zone.js запустит рендеринг). Так же приводит факт того что об этом уже неоднократно говорили и выступали на разных конфах Victor Savkin, Rob Wormald и другие ex-Angular team. (Тут же вопрос у меня, почему бы не занести это в angular/core если все знали, не понятно, Upd - в Angular team не хотят вносить доп функционал из либ [rxjs]).</p>
+<p>Michael Hladky предлагает использовать detectChanges, для немедленного реагирования, и позволяя тем самым исключить работу с zone.js.</p>
+<p>Пример реализации этого pipe - push</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Component</span>({
+<span style="color:#a6e22e">selector</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;app-display&#39;</span>,
+<span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">  {{observable$ | push}}
+</span><span style="color:#e6db74">`</span>
+})
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DisplayComponent</span> {
+  <span style="color:#a6e22e">observable$</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">of</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>);
+}
+</code></pre></div><p>Но в данном случае этот код запустит detectChanges аж 3 раза, что наоборот увеличит нагрузку. Решение этой проблемы с помощью pipe функции  coalesceWith(animationframes)  которая пересылает последнее значение один раз в кадре анимации.</p>
+<p>Много слов выше, просто стоит попробовать:</p>
+<p><code>npm i @rx-angular/template</code></p>
+<p>или прочитать <a href="https://indepth.dev/angulars-push-pipe-part-1">серию статаей</a> от Michael Hladky.</p>
+<p>Ну и возможно будет интересно взглянуть на внутренности, самого rx-angular, ведь все они рассчитаны на улучшение производительности.</p>
+<hr>
+<p><strong>rx-angular/templates: rxLet</strong></p>
+<p>Директива *rxLet, по сути такой же как и *ngrxLet но с некоторым отличием. Дополнительные каналы RxJS, next, error, complete и бонусом suspense когда еще ничего не определено.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ng-container</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">rxLet</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hero$; let hero; rxSuspense: suspenseView; rxError: errorView; rxComplete: completeView&#34;</span>&gt;
+        {{hero.name}}
+&lt;<span style="color:#f92672">ng-container</span>&gt;
+&lt;<span style="color:#f92672">ng-template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">suspenseView</span>&gt;Loading...&lt;/<span style="color:#f92672">ng-template</span>&gt;
+&lt;<span style="color:#f92672">ng-template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">errorView</span>&gt;Error!&lt;/<span style="color:#f92672">ng-template</span>&gt;
+&lt;<span style="color:#f92672">ng-template</span> <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">completeView</span>&gt;Complete.&lt;/<span style="color:#f92672">ng-template</span>&gt;
+</code></pre></div><hr>
+<p><strong>x-angular/templates: unpath</strong></p>
+<p>UnpatchEventsDirective - для частичной деактивации NgZone, а также избавления от ненужных рендеров через патчи addEventListener зоной. Его можно использовать с любым элементом, к которым вы применяете привязки событий.</p>
+<p>Проблемный код:
+<code>&lt;div (mousemove)=&quot;doStuff($event)&quot;&gt;Hover me&lt;/div&gt;</code>
+Проблема в том, что каждое событие, зарегистрированное через (), например (mousemove) (или custom @Output ()) помечает компонент и всех его предков как dirty и повторно перерисовывает все дерево компонентов. Таким образом, даже если ваш eventListener вообще не связан с какими-либо изменениями, ваше приложение повторно перерендерит все дерево компонентов. Это может привести к очень плохому взаимодействию с пользователем, особенно если вы работаете с часто запускаемыми событиями, такими как mousemove.</p>
+<p>Директива unpatch решает эту проблему удобным способом:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">button</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">unpatch</span><span style="color:#960050;background-color:#1e0010">]</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">click</span><span style="color:#960050;background-color:#1e0010">)=&#34;</span><span style="color:#a6e22e">triggerSomeMethod</span><span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">event</span><span style="color:#960050;background-color:#1e0010">)&#34;</span>&gt;click me&lt;/<span style="color:#f92672">button</span>&gt;
+&lt;<span style="color:#f92672">button</span>
+  <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">unpatch</span><span style="color:#960050;background-color:#1e0010">]=&#34;[&#39;</span><span style="color:#a6e22e">mousemove</span><span style="color:#960050;background-color:#1e0010">&#39;]&#34;</span>
+  <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">mousemove</span><span style="color:#960050;background-color:#1e0010">)=&#34;</span><span style="color:#a6e22e">doStuff2</span><span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">event</span><span style="color:#960050;background-color:#1e0010">)&#34;</span>
+  <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">click</span><span style="color:#960050;background-color:#1e0010">)=&#34;</span><span style="color:#a6e22e">doStuff</span><span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">event</span><span style="color:#960050;background-color:#1e0010">)&#34;</span>
+&gt;
+  click or hover me
+&lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><hr>
+<p><strong>rx-angular/templates: render strategy</strong></p>
+<p>Дополнительный property - strategy. Есть в push pipe и rxLet directive.</p>
+<p>RenderStrategies можно рассматривать как основу уровня оптимизации производительности.</p>
+<p>Local Strategy - эта стратегия рендерит текущий компонент и все его дочерние элементы, которые находятся на пути, отмеченном как dirty или имеющем компоненты с ChangeDetectionStrategy.Default На первый взгляд может показаться, что это тоже самое что вызов detectChanges, но тут он имеет отличия, а именно группировку событий по компоненту по которому был вызван change detection.</p>
+<p>Global Strategy - markForCheck на стероидах, может работать без зоны.</p>
+<p>Noop - Ничего не детектит и не отрисовывает, может быть полезен для отладки, и в разных оптимизациях.</p>
+<p>Native - markForCheck который отрендерит только в следующем Application.tick, т.е по сути async pipe.</p>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2021<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
