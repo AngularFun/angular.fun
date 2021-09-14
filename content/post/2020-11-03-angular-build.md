@@ -31,13 +31,7 @@ Bazel хорошая технология, но плохо работает с j
 
 **Опрос по сборщикам Angular:**
 
-А что вы используете при сборке? https://t.me/ngFanatic/189
-
-- 1% Bazel
-- 9% Nx CLI
-- 80% Angular CLI
-- 9% webpack config
-- 1% other
+{{< telegram "ngFanatic/189"  >}}
 
 -----
 

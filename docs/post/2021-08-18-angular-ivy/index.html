@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Плоды Angular Ivy  - Angular Fun</title>
+  <title>🌿 Плоды Angular Ivy  - Angular Fun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -47,7 +47,7 @@
   <div class="post p2 p-responsive wrap" role="main">
     <div class="measure">
       <div class="post-header mb2">
-        <h1 class="py2">Плоды Angular Ivy </h1>
+        <h1 class="py2">🌿 Плоды Angular Ivy </h1>
         <span class="post-meta">Aug 18, 2021 by
           <a href="https://twitter.com/irustm">Rustam </a>
         </span><br>
@@ -55,13 +55,13 @@
       </div>
 
       <article class="post-content">
-        <p>🌿 Плоды Angular Ivy начинают радовать. Еще больше динамики!</p>
+        <p>Плоды Angular Ivy начинают радовать. Еще больше динамики!</p>
 <p>В настоящее время чтобы реализовать динамические компоненты в Angular есть 2 пути:</p>
 <ul>
 <li>Используя JIT Compiler, т.е. из любой строки создать компонент. Имеет в себе много недостатков, поэтому практически никто таким не занимается на проде.</li>
 <li>Используя ViewContainerRef, и ему подобные API, которая на самом деле не предоставляет достаточной гибкости динамического создания представлений из смеси статического HTML.</li>
 </ul>
-<p>И вот появилось предложение для создания таких компонент, Imperative View &amp; Template Composition APIs.</p>
+<p>И вот появилось <a href="https://github.com/angular/angular/issues/43120">предложение</a> для создания таких компонент, Imperative View &amp; Template Composition APIs.</p>
 <p>Пример, как это может быть</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">createView</span>, <span style="color:#a6e22e">html</span>, <span style="color:#a6e22e">component</span>, <span style="color:#a6e22e">directive</span>, <span style="color:#a6e22e">text</span>, <span style="color:#a6e22e">binding</span>, <span style="color:#a6e22e">template</span>} <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@angular/core/compose&#34;</span>;
 <span style="color:#66d9ef">import</span> {<span style="color:#a6e22e">MyYellowComponent</span>} <span style="color:#e6db74">&#34;./myYellow.component&#34;</span>;

@@ -6,24 +6,24 @@
     <language>en-us</language>
     
     
-    <updated>Wed, 18 Aug 2021 00:00:00 UTC</updated>
-    
-    <item>
-      <title>Плоды Angular Ivy </title>
-      <link>https://angular.fun/post/2021-08-18-angular-ivy/</link>
-      <pubDate>Wed, 18 Aug 2021 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/post/2021-08-18-angular-ivy/</guid>
-      <description>&lt;p&gt;🌿 Плоды Angular Ivy начинают радовать. Еще больше динамики!&lt;/p&gt;</description>
-    </item>
+    <updated>Mon, 13 Sep 2021 00:00:00 UTC</updated>
     
     <item>
       <title>🅰️ Что нам готовит Angular 13.</title>
       <link>https://angular.fun/post/2021-09-13-angular-13-next/</link>
-      <pubDate>Wed, 18 Aug 2021 00:00:00 UTC</pubDate>
+      <pubDate>Mon, 13 Sep 2021 00:00:00 UTC</pubDate>
       
       <guid>https://angular.fun/post/2021-09-13-angular-13-next/</guid>
       <description>&lt;p&gt;Пока изменений на первый взгляд не так уж и много, думаю добавят много при 13.1+2 как это было с 12. Я бы назвал что релиз Angular 13 это про окончательный дроп IE.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>🌿 Плоды Angular Ivy </title>
+      <link>https://angular.fun/post/2021-08-18-angular-ivy/</link>
+      <pubDate>Wed, 18 Aug 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2021-08-18-angular-ivy/</guid>
+      <description>&lt;p&gt;Плоды Angular Ivy начинают радовать. Еще больше динамики!&lt;/p&gt;</description>
     </item>
     
     <item>
