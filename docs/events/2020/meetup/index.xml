@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meetups 2020 on Angular Fun</title>
+    <link>https://angular.fun/events/2020/meetup/</link>
+    <description>Recent content in Meetups 2020 on Angular Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://angular.fun/events/2020/meetup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular Abuja</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-08-angular-abuja/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-08-angular-abuja/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Athens</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-24-angular-athens/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-24-angular-athens/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Belarus</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-28-angular-belarus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-28-angular-belarus/</guid>
+      <description>📌 “Mighty Decorators in Typescript” - what could we get out of it? Валентин Кононов, Fullstack Engineer, Mapbox
+📌 “Going nuts inside Ivy” Никита Полторацкий, Fullstack Engineer, Akveo</description>
+    </item>
+    
+    <item>
+      <title>Angular Berlin</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-23-angular-berlin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-23-angular-berlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Berlin</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-04-angular-berlin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-04-angular-berlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Bogota</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-04-angular-bogota/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-04-angular-bogota/</guid>
+      <description>⭐️ ¿Por qué debes actualizar a Angular 9? ⭐️
+👨🏻‍💻 SPEAKER: Alfonso Andrés López Molina - @osnoser1
+👉 BIO: Desarrollador de Software Venezolano con más de 7 años de experiencia y uso de Angular desde versiones tempranas del desarrollo, con aportes a la comunidad @ngVenezuela y a proyectos como @ngrx/platform, ngx-datatable, ngx-auth, etc.
+💼 DESCRIPCIÓN: La espera ha culminado, conoce todas las novedades y mejoras de rendimiento que vienen con esta nueva versión de Angular y que te llevarán a actualizar sin pensarlo dos veces.</description>
+    </item>
+    
+    <item>
+      <title>Angular Costa Rica</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-06-angular-costa-rica/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-06-angular-costa-rica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular DC</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-12-angular-dc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-12-angular-dc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Halifax</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-26-angular-halifax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-26-angular-halifax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular IL</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-14-angular-il/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-14-angular-il/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular IL</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-26-angular-il/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-26-angular-il/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular IL</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-22-angular-il/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-22-angular-il/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular IL</title>
+      <link>https://angular.fun/events/2020/meetup/2020-04-19-angular-il/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-04-19-angular-il/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Kharkiv</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-24-angular-kharkiv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-24-angular-kharkiv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Leipzig</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-14-angular-leipzig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-14-angular-leipzig/</guid>
+      <description>#24: The future of Angular in the post-Ivy release</description>
+    </item>
+    
+    <item>
+      <title>Angular Leipzig</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-10-angular-leipzig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-10-angular-leipzig/</guid>
+      <description>#26: PWA with Angular Part 2: Web Push Notifications</description>
+    </item>
+    
+    <item>
+      <title>Angular Leipzig #25</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-11-angular-leipzig/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-11-angular-leipzig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Lyon</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-23-angular-lyon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-23-angular-lyon/</guid>
+      <description>📝 Programme :
+1️⃣ Practice makes perfect - when it comes to RxJS
+🇬🇧 Remote talk in english (also available in german)
+By making a deep dive into a very advanced real-world example, one will experience the strengths of RxJS. Additionally, it will help everyone to establish a reactive mindset, which is definitely the most crucial skill needed for being efficient with RxJS. Together we are going to develop a fully-featured carousel implementation, heavily relying on RxJS.</description>
+    </item>
+    
+    <item>
+      <title>Angular Lyon</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-18-angular-lyon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-18-angular-lyon/</guid>
+      <description>📝 Programme :
+1️⃣ My journey into mobile and how I fell in love with Ionic
+I was an only developer at a company that had to do lots of native android and iOS apps and there&amp;rsquo;s only so much you can do. 10 years ago I discovered hybrid web apps and this changed everything for me.
+📢Tobias Kausch
+🐦@tobikabla
+ 2️⃣ Rethinking Cross-Platform
+🇬🇧 Remote talk in english
+Building &amp;ldquo;cross-platform&amp;rdquo; apps is often a loaded term.</description>
+    </item>
+    
+    <item>
+      <title>Angular Medellin</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-18-angular-medellin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-18-angular-medellin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular Medellin</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-29-angular-medellin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-29-angular-medellin/</guid>
+      <description>Workshop: Angular next level, here we go! 3 Geniales charlas en formato lightning 👨‍🏫 1 Mega Workshop 👩‍💻 2 Súper sorpresas para los asistentes 🌟</description>
+    </item>
+    
+    <item>
+      <title>Angular Minsk</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-16-angular-minsk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-16-angular-minsk/</guid>
+      <description>AngularMinsk #7 состоится 16 января 2019! В SPACE в 19:00
+Поговорим о создании и механизме работы форм в Angular. А также расскажем какие перспективы открываются при работе с Ivy для Angular разработчика.
+В программe:
+⚡️ Anatomy of Angular Forms - Шохрýх Давлáтов из компании Inspectorio, рассмотрит принципы работы Template-driven &amp;amp; Reactive forms , создание валидаторов и кастомных элементов, преимущества и недостатки каждого подхода по отдельности.
+⚡️Ivy potential in Anguar 9. The enabler 💣 - Константин Маликов из компании Dev Team расскажет о своём опыте с Ivy, а также перспективах, которые открываются для Angular разработчиков, учитывая, что в ближайшее время выйдет Angular 9 и Ivy в финальной версии.</description>
+    </item>
+    
+    <item>
+      <title>Angular Minsk</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-18-angular-minsk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-18-angular-minsk/</guid>
+      <description>🏃‍♂️ Runtime Type Safety in TypeScript - Valentin Kononov из компании Mapbox, расскажет о том, что происходит после компиляции TypeScript кода, runtime-проверках типов, валидации, декораторах и некоторых других вещах, которые позволят еще немного приблизить ваш TypeScript к строго типизированному языку.
+💉 Dependency injection in Angular - Ilya Ryabchinski из компании SaM Solutions, расскажет о фундаментальных принципах Dependency Injection (DI), рассмотрит текущую ситуацию с DI во фронтенде, подробно остановившись на деталях реализации DI в Angular.</description>
+    </item>
+    
+    <item>
+      <title>Angular MVD</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-15-angular-mvd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-15-angular-mvd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular MVD</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-19-angular-mvd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-19-angular-mvd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular NYC</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-21-angular-nyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-21-angular-nyc/</guid>
+      <description>🕒 6:45 - Nir Kaufman
+🎤 Extendable Shared Components Techniques
+Let&amp;rsquo;s revisit conventional and less-known techniques for building reusable, extendable Angular UI components with content projection, dynamic templates, and declarative directives.
+🕒 7:20 - Jason Jean (http://Nx.dev &amp;amp; Nrwl.io)
+🎤 What&amp;rsquo;s new in Nx?
+Nx is an extensible devtool that helps you develop like Google, Microsoft, and Facebook by using a monorepo. In the last year, a ton of new features have been added.</description>
+    </item>
+    
+    <item>
+      <title>Angular NYC</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-18-angular-nyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-18-angular-nyc/</guid>
+      <description>👨‍💻Boris Yakubchik (http://yboris.dev/)
+🎤 2 Years with Angular &amp;amp; Electron: Video Hub App 2
+Learn how to get started with Electron and Angular (Create a Win, Mac, &amp;amp; Linux App with one code base). Discover how powerful Angular pipes can be for an advanced search &amp;amp; filter functionality. Find out how functional programming can in places simplify your code. Hear how making a project open source was an excellent decision for Video Hub App.</description>
+    </item>
+    
+    <item>
+      <title>Angular NYC - workshop</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-27-angular-nyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-27-angular-nyc/</guid>
+      <description>Angular Codelab</description>
+    </item>
+    
+    <item>
+      <title>Angular Portland</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-23-angular-portland/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-23-angular-portland/</guid>
+      <description>Angular 9 is here! (Well, technically it will be here sometime before this meetup occurs.) It&amp;rsquo;s a HUGE DEAL, so we want to help you get prepped!
+We&amp;rsquo;re celebrating Angular 9 and our new co-organizer Brian Love with an information-packed meetup all about Angular 9.
+Sam Julien will kick us off by speaking on how you can successfully prepare for and migrate to Angular 9. Then, Brian will talk about all the amazing new features of Angular 9, including the highly anticipated Ivy renderer!</description>
+    </item>
+    
+    <item>
+      <title>Angular Raleigh</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-16-angular-raleigh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-16-angular-raleigh/</guid>
+      <description> Introduction to Angular routing Deep dive to routing concepts (Configuration, Child route, Route guard, Redirect) Develop simple application based on above concepts (Handson)  </description>
+    </item>
+    
+    <item>
+      <title>Angular Raleigh</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-14-angular-raleigh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-14-angular-raleigh/</guid>
+      <description> Discuss different stages needed for Angular application in a CI/CD pipeline. Write Unit tests using Jasmine for the application developed in February month event (Ng Cook book app). Setup pipeline in GitLab to build, test and deploy application to Google Cloud (If time permits we will also see how to do it with AWS and Azure).  </description>
+    </item>
+    
+    <item>
+      <title>Angular SF</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-29-angular-sf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-29-angular-sf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular SF</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-18-angular-sf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-18-angular-sf/</guid>
+      <description>🗞 6:40p · Angular News
+by Minko Gechev, (https://twitter.com/mgechev) Angular Team
+ 🚴🏻‍♀️ 6:50p · TBD - Google
+by Ilona Budapesti
+ 👀 7:15p · Coding With Empathy: Developers Are People Too
+by Amanda Cifaldi https://twitter.com/algcifaldi
+ 🍃 7:50p · TBD - Co-founder Nrwl
+by Jeff Cross https://twitter.com/jeffbcross</description>
+    </item>
+    
+    <item>
+      <title>Angular Utah</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-28-angular-utah/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-28-angular-utah/</guid>
+      <description>Aaron Frost - Blogs and Static Sites w/ Angular
+How many of us have struggled to improve our lighthouse scores? How many of us need help, despite following all best practices in Angular, with getting our apps to load faster? If this is you, come learn about Scully, and new project that allows you to take your existing/new Angular projects and statically generate them. This is known as JAMStack development, or Static Site Generation (SSG).</description>
+    </item>
+    
+    <item>
+      <title>Angular Utah</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-25-angular-utah/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-25-angular-utah/</guid>
+      <description>Rogelio Flores - PWAs + Angular
+No, we&amp;rsquo;re not talking about politics when we talk about Progressive Web Apps (PWAs). We will be talking about how to create your own PWA, and what tools the Angular ecosystem provides to make it easier for you to create them. PWAs aim to provide a user experience on web apps similar to native apps. Specifically, PWAs should provide offline rendering and offline-first storage, app-like installation, besides being responsive.</description>
+    </item>
+    
+    <item>
+      <title>Angular Zurich</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-11-angular-zurich/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-11-angular-zurich/</guid>
+      <description>Managing Angular Libraries The Angular CLI is a really amazing tool, that simplifies all the non-development bits of software development in Angular applications. It&amp;rsquo;s not just for applications though - it can also be used for managing shared libraries! We&amp;rsquo;re going to have a look at one way of setting this up. We&amp;rsquo;ll cover using schematics for consistency between libraries, as well as the development workflow, testing, and deploying to NPM via Jenkins.</description>
+    </item>
+    
+    <item>
+      <title>AngularSP</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-15-angular-sp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-15-angular-sp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AngularToronto Meetup</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-10-angular-toronto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-10-angular-toronto/</guid>
+      <description>🕒 6:20
+🎤 Building Large Angular applications with Bazel
+🗣 Matthew Mackay (https://twitter.com/MattMackay)
+💻 Technical Lead - Build and Developer Infrastructure at Evertz Microsystems
+ 🕒 7:10
+🎤 Enhancing the workspace with Custom Builders
+🗣 Benjamin Cabanes (https://twitter.com/bencabanes)
+💻 Senior Angular Engineer at Nrwl.io
+ 🕒 7:50 🎤 Building mobile apps with Ionic
+🗣 Mike Hartington (https://twitter.com/mhartington)
+💻Developer Advocate at Ionic | Google Developers Expert in Angular, Firebase, Web Technologies</description>
+    </item>
+    
+    <item>
+      <title>AngularToronto Meetup</title>
+      <link>https://angular.fun/events/2020/meetup/2020-04-07-angular-toronto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-04-07-angular-toronto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ATL Angular</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-15-angular-atl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-15-angular-atl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ATL Angular</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-04-angular-atl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-04-angular-atl/</guid>
+      <description>EVENT DETAILS:
+&amp;ldquo;GraphQL: What&amp;rsquo;s all the fuss anyway?&amp;rdquo; by Josh Oppenheim
+GraphQL is already being used by many teams of all sizes to clearly and efficiently get applications precisely the data they need from potentially many APIs. Together we&amp;rsquo;ll learn the basics of GraphQL - What it&amp;rsquo;s for, what benefits it could bring to your app, when you should use it, and how to incrementally incorporate GraphQL into your organization&amp;rsquo;s tech stack.</description>
+    </item>
+    
+    <item>
+      <title>NG Turkey</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-08-ng-turkey/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-08-ng-turkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ng-kyoto</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-28-ng-kyoto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-28-ng-kyoto/</guid>
+      <description>ng-kyoto Angular Meetup #11</description>
+    </item>
+    
+    <item>
+      <title>ngGirls Zurich</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-21-ng-girls-zurich/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-21-ng-girls-zurich/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NgGuayaquil</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-09-ng-guayaquil/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-09-ng-guayaquil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ngKyiv</title>
+      <link>https://angular.fun/events/2020/meetup/2020-03-12-ng-kyiv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-03-12-ng-kyiv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ngPittsburgh</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-22-ng-pittsburgh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-22-ng-pittsburgh/</guid>
+      <description>Angular 9 is in its final release candidate phases. We expect a stable release between now and Jan 22, 2020. Unlike traditional ngPittsburgh Meetups - we&amp;rsquo;re going to have multiple speakers speaking on individual features that are coming with Angular 9.</description>
+    </item>
+    
+    <item>
+      <title>NgStuttgart</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-22-ng-stuggard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-22-ng-stuggard/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>San Diego Angular</title>
+      <link>https://angular.fun/events/2020/meetup/2020-01-15-angular-san-diego/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-01-15-angular-san-diego/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>San Diego Angular</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-19-angular-san-diego/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-19-angular-san-diego/</guid>
+      <description>6:40pm - 7:00pm &amp;ldquo;Angular Services&amp;rdquo; by Cherr
+7:00pm - 7:30pm &amp;ldquo;Angular v9.0 is Here!&amp;rdquo; by Julie Knowles (@Julie_M_Knowles) and Michi DeWitt (@mmmmichi)</description>
+    </item>
+    
+    <item>
+      <title>STL Angular</title>
+      <link>https://angular.fun/events/2020/meetup/2020-02-19-angular-stl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/events/2020/meetup/2020-02-19-angular-stl/</guid>
+      <description>This month we will be kicking off a series of talks titled &amp;ldquo;Angular the Platform&amp;rdquo;. In this series we will be exploring each of the composite pieces that go into making Angular more than just another component framework. To start this series we will learn about the Angular CLI.
+The starting point for most folks coming to Angular, the Angular CLI is an amazing collection of tools, configuration and schematics that make modern Angular development possible.</description>
+    </item>
+    
+  </channel>
+</rss>
