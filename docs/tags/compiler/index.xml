@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>compiler on Angular Fun</title>
+    <link>https://angular.fun/tags/compiler/</link>
+    <description>Recent content in compiler on Angular Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/compiler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Improve Angular templates</title>
+      <link>https://angular.fun/post/2021-09-19-angular-templates/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/post/2021-09-19-angular-templates/</guid>
+      <description>&lt;p&gt;Недавно собрали различные предложения по улучшению Angular templates. В ближайшем митинге их рассмотрят. Ниже я постарался собрать наиболее интересные предложения, если вы заинтересованы во внедрении этих фич думаю стоит зайти и проголосовать за них, или же написать отзывы в комменты.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

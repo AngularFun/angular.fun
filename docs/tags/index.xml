@@ -6,13 +6,22 @@
     <description>Recent content in Tags on Angular Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>blog</title>
       <link>https://angular.fun/tags/blog/</link>
-      <pubDate>Mon, 13 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://angular.fun/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>compiler</title>
+      <link>https://angular.fun/tags/compiler/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/tags/compiler/</guid>
       <description></description>
     </item>
     

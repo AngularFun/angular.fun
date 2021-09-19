@@ -6,7 +6,16 @@
     <description>Recent content in blog on Angular Fun</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Improve Angular templates</title>
+      <link>https://angular.fun/post/2021-09-19-angular-templates/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/post/2021-09-19-angular-templates/</guid>
+      <description>&lt;p&gt;Недавно собрали различные предложения по улучшению Angular templates. В ближайшем митинге их рассмотрят. Ниже я постарался собрать наиболее интересные предложения, если вы заинтересованы во внедрении этих фич думаю стоит зайти и проголосовать за них, или же написать отзывы в комменты.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>🅰️ Что нам готовит Angular 13.</title>
       <link>https://angular.fun/post/2021-09-13-angular-13-next/</link>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Improve Angular templates - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2021-09-19-angular-templates/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Improve Angular templates</h1>
+        <span class="post-meta">Sep 19, 2021 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>Недавно собрали различные предложения по улучшению Angular templates. В ближайшем митинге их рассмотрят. Ниже я постарался собрать наиболее интересные предложения, если вы заинтересованы во внедрении этих фич думаю стоит зайти и проголосовать за них, или же написать отзывы в комменты.</p>
+<p>К сведению, есть доклад как рассматривают различные PR в Angular Team: Angular Connect <a href="https://www.youtube.com/watch?v=6Zfk0OcFGn4&amp;ab_channel=AngularConnect">YouTube</a></p>
+<p>Ниже я постарался собрать наиболее интересные предложения, если вы заинтересованы во внедрении этих фич думаю стоит зайти и проголосовать за них, или же написать отзывы в комменты.</p>
+<p><strong>Деструктуризация различных типов объектов:</strong> <a href="https://github.com/angular/angular/issues/38807">38807</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">ngFor</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;let { key as country, value as poi } of countryPoiMap | keyvalue&#34;</span>&gt;
+   &lt;<span style="color:#f92672">div</span>&gt;{{ country.name }}&lt;/<span style="color:#f92672">div</span>&gt;
+   &lt;<span style="color:#f92672">div</span>&gt;{{ poi.name }}&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p><strong>Оператор in в шаблонах</strong>
+<a href="https://github.com/angular/angular/issues/38560">38560</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">ngIf</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#39;a&#39; in item&#34;</span>&gt;
+  I&#39;m expecting item is no longer of type A | B, but only A
+  {{item.a}}
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>Совместимость с <strong>ES Optional Chaining</strong>
+<a href="https://github.com/angular/angular/issues/34385">34385</a>
+Как вы знаете эта фича в шаблонах, появилась задолго до того как фича была в спеке.
+Например выражение <code>a?.b</code> в Angular означает <code>null == a ? null : a.b</code> по спеке же <code>a == null ? undefined : a.b</code> , ну и различные изменения в этом духе.</p>
+<p>*<em>Внедрение директивы <em>ngLet</em></em>
+<a href="https://github.com/angular/angular/issues/15280">15280</a>
+Фичу ждем уже 5й год, посмотрим. Напомню, ее реализация есть в различных либах, таких как <code>ngxs, rx-angular/templates, ngxf</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">ngLet</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;userStream|async as user&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p><strong>Input Output Spreads</strong></p>
+<p><a href="https://github.com/angular/angular/issues/14545">14545</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">my-component</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">prop1</span><span style="color:#960050;background-color:#1e0010">]=&#34;</span><span style="color:#a6e22e">prop1</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">{...</span><span style="color:#a6e22e">otherInputs</span><span style="color:#960050;background-color:#1e0010">}</span> &gt;&lt;/<span style="color:#f92672">my-component</span>&gt;
+</code></pre></div><p><strong>Поддержка стрелочных функции</strong></p>
+<p><a href="https://github.com/angular/angular/issues/14129">14129</a>
+Сомнительное предложение как по мне. Согласен с утверждением в <a href="https://github.com/angular/angular/issues/14129#issuecomment-275645024">коментах</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">select</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">compareWith</span><span style="color:#960050;background-color:#1e0010">]=&#34;(</span><span style="color:#a6e22e">a</span><span style="color:#960050;background-color:#1e0010">,</span> <span style="color:#a6e22e">b</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#960050;background-color:#1e0010">=</span>&gt; a.id == b.id&#34; [(ngModel)]=&#34;selectedCountries&#34;&gt; ...
+</code></pre></div><p>*<em>Деструктуризация значений из <em>ngIf as</em></em>
+<a href="https://github.com/angular/angular/issues/27555">27555</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">ngIf</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;thingAndOther$ | async as {thing, other}&#34;</span>&gt;
+</code></pre></div><p><strong>Cold event streams</strong>
+<a href="https://github.com/angular/angular/issues/13248">https://github.com/angular/angular/issues/13248</a>
+Предложение настолько устарело, что синтаксис компонентов еще с Angular 2 beta. Суть предложения, создать EventStream только в момент подписки, особенно ок для Output, и + не будет лишний раз дергать CD. В целом похож на одно из предложении из <code>rx-angular/templates</code> Так же в комментах указали на одну либу, пример:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">button</span> <span style="color:#960050;background-color:#1e0010">(*</span><span style="color:#a6e22e">click</span><span style="color:#960050;background-color:#1e0010">)=&#34;</span><span style="color:#a6e22e">clicks</span><span style="color:#960050;background-color:#1e0010">$;</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">event </span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;custom payload&#39;</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;Click Me&lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">@Component</span>({...})
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyComponent</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">OnInit</span> {
+  <span style="color:#66d9ef">@ObservableEvent</span>()
+  <span style="color:#a6e22e">clicks$</span>: <span style="color:#66d9ef">Observable</span>&lt;<span style="color:#f92672">any</span>&gt;;
+
+  <span style="color:#a6e22e">ngOnInit() {</span>
+    <span style="color:#75715e">// we can either manually subscribe or use the async pipe
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">clicks$</span>.<span style="color:#a6e22e">subscribe</span>(<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>);
+  }
+}
+
+</code></pre></div><p>Полный список предложений: <a href="https://github.com/angular/angular/issues/43485">43485</a></p>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+        ,&nbsp;
+        <a href="https://angular.fun/tags/compiler">compiler</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2021<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
