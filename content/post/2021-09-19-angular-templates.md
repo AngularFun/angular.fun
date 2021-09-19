@@ -2,7 +2,7 @@
 title: 'Improve Angular templates'
 date: 2021-09-19T00:00:00Z
 draft: false
-tags: ['blog']
+tags: ['blog', 'compiler']
 author: 'Rustam'
 twitter: 'irustm'
 ---
