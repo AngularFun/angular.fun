@@ -7,11 +7,13 @@ author: 'Rustam'
 twitter: 'irustm'
 ---
 
+<!--more-->
+
+![Canvas angualar](/post/images/angular-canvas.png)
+
 Разработка на canvas с контекстом 2D обычно не предполагает никаких сложностей. Для начала необходимо изучить пару десятков встроенных методов [WEB API CanvasRenderingContext2D](https://developer.mozilla.org/ru/docs/Web/API/CanvasRenderingContext2D), прочитать [рекомендации по оптимизации](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas) , вспомнить школьный курс геометрии. И на этих базовых вещах можно уже строить неплохие приложения на canvas. 
 
 Как один из вариантов начала разработки на canvas: из примитивов фигур строят элементы, затем их объединяют в функцию, эти функции складывают в готовый элемент,  объединяют их в слой, ну и в конце уже отдают в функцию рендера. Все еще звучит довольно неплохо и с этим можно даже жить, если использовать чистые функции, и придерживаться везде этого подхода. Но не всегда этого удается, всегда есть соблазн выхватить что-либо из контекста. Для примера приведу [код](https://github.com/evanw/source-map-visualization/blob/gh-pages/code.js) из source-map-vizualization [https://evanw.github.io/source-map-visualization/](https://evanw.github.io/source-map-visualization/) замечательный инструмент, сделанный на canvas. Только чтобы понять весь код и привнести какие либо исправления, я думаю придется посидеть не один час. 
-
-<!--more-->
 
 Типичный проект на canvas+Angular может выглядеть так, как описано в статье: [How to get started with Canvas animations in Angular](https://medium.com/angular-in-depth/how-to-get-started-with-canvas-animations-in-angular-2f797257e5b4). Достаточно хорошо, если вам необходимо рисовать мало элементов:
 
@@ -43,7 +45,6 @@ export class AppComponent implements OnInit {
 
 Постепенно такой код всегда стремится к большей степени не поддерживаемости. Так случилось и у меня, как я пришел на проект, где повсюду использовался canvas + Angular, к тому уже с большим легаси на тот момент. Само собой скорость разработки уменьшилась, все нужно было глобально рефакторить. После недолгого погружения в проект сформировались требования для рефакторинга.
 
----
 
 ### Требования для удобного использования HTML Canvas
 
@@ -59,7 +60,7 @@ export class AppComponent implements OnInit {
 Из существующих решений Angular Canvas renderer в open source, большинство выглядело простым экспериментом, и не было упоминаний что где-то на проде его юзают. К тому же эти решения подменяют полностью DefaultDomRenderer, а хотелось использовать Canvas Renderer только для определенных компонентов, дабы не сломать своим рендерером остальной функционал приложения.
 В этой статье не буду рассказывать как создавать свои renderer под Angular, выше в статье уже описывал процесс создания.
 
-### Вышел: AngularCanvasRenderer,
+### Вышел: AngularCanvasRenderer
 
 Для того чтобы использовать этот рендерер только в нужных для нас местах, необходимо отметить компонент через декоратор **@CanvasComponent.** В свою, очередь этот декоратор унесет метаинфу по компоненту в мапу, и рендерер будет понимать какой все-таки использовать renderer при выполнения инструкции из шаблона.
 
@@ -175,9 +176,9 @@ addEventListener(eventName: string, callbackFunc) {
 
 Проверку принадлежности координат мыши в элемент необходимо реализовывать самому, вспомнив курс геометрии. Благо легко входишь во вкус.
 
-Полный пример: [https://github.com/irustm/angular-canvas/blob/master/src/app/demos/elements/triangle.element.ts](https://github.com/irustm/angular-canvas/blob/master/src/app/demos/elements/triangle.element.ts)
+Полный пример: [triangle.element.ts](https://github.com/irustm/angular-canvas/blob/master/src/app/demos/elements/triangle.element.ts)
 
-Еще больше методов в readme проекта: [https://github.com/irustm/angular-canvas](https://github.com/irustm/angular-canvas)
+Еще больше методов в readme проекта: [angular-canvas](https://github.com/irustm/angular-canvas)
 
 ---
 
@@ -185,7 +186,7 @@ addEventListener(eventName: string, callbackFunc) {
 
 В схеме ниже описан механизм работы Angular Canvas Renderer:
 
-![Untitled](%D0%9A%D0%B0%D0%BA%20%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20HTML%20Canvas%20%D1%83%D0%B4%D0%BE%D0%B1%D0%BD%D0%BE,%20%D0%B8%D0%BB%D0%B8%20%D0%BA%D0%B0%D0%BA%20%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B5%D1%81%D1%82%209b8d4fe1e2894b5ebae629a86c1236fb/Untitled%201.png)
+![Renderer](/post/images/renderer.png)
 
 Где в CanvasComponent:
 
@@ -193,6 +194,8 @@ addEventListener(eventName: string, callbackFunc) {
 <canvas>   NgCanvas
    <canvas-element></canvas-element>   CanvasElement
 ```
+
+----
 
 ### Последствия
 
@@ -218,8 +221,10 @@ addEventListener(eventName: string, callbackFunc) {
 
 angular-canvas [3,4 кб](https://bundlephobia.com/package/angular-canvas@0.3.0) 
 
-Ссылки: 
+**Ссылки:**
 
 Github: [https://github.com/irustm/angular-canvas](https://github.com/irustm/angular-canvas)
+
 Демка игры из превью: [Game](https://irustm.github.io/angular-canvas/#/game)
+
 Демка графики: [Graph](https://irustm.github.io/angular-canvas/#/demo)
