@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>angular canvas on Angular Fun</title>
+    <link>https://angular.fun/tags/angular-canvas/</link>
+    <description>Recent content in angular canvas on Angular Fun</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angular.fun/tags/angular-canvas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как писать на HTML Canvas удобно, или как изобрести очередной renderer на Angular.</title>
+      <link>https://angular.fun/post/2021-10-01-angular-canvas/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://angular.fun/post/2021-10-01-angular-canvas/</guid>
+      <description>&lt;p&gt;Разработка на canvas с контекстом 2D обычно не предполагает никаких сложностей. Для начала необходимо изучить пару десятков встроенных методов &lt;a href=&#34;https://developer.mozilla.org/ru/docs/Web/API/CanvasRenderingContext2D&#34;&gt;WEB API CanvasRenderingContext2D&lt;/a&gt;, прочитать &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas&#34;&gt;рекомендации по оптимизации&lt;/a&gt; , вспомнить школьный курс геометрии. И на этих базовых вещах можно уже строить неплохие приложения на canvas.&lt;/p&gt;
+&lt;p&gt;Как один из вариантов начала разработки на canvas: из примитивов фигур строят элементы, затем их объединяют в функцию, эти функции складывают в готовый элемент,  объединяют их в слой, ну и в конце уже отдают в функцию рендера. Все еще звучит довольно неплохо и с этим можно даже жить, если использовать чистые функции, и придерживаться везде этого подхода. Но не всегда этого удается, всегда есть соблазн выхватить что-либо из контекста. Для примера приведу &lt;a href=&#34;https://github.com/evanw/source-map-visualization/blob/gh-pages/code.js&#34;&gt;код&lt;/a&gt; из source-map-vizualization &lt;a href=&#34;https://evanw.github.io/source-map-visualization/&#34;&gt;https://evanw.github.io/source-map-visualization/&lt;/a&gt; замечательный инструмент, сделанный на canvas. Только чтобы понять весь код и привнести какие либо исправления, я думаю придется посидеть не один час.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

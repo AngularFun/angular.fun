@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Как писать на HTML Canvas удобно, или как изобрести очередной renderer на Angular. - Angular Fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://angular.fun/post/2021-10-01-angular-canvas/">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/combined-min.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/tipuesearch/tipuesearch.css">
+  <link rel="stylesheet" type="text/css" href="https://angular.fun/css/style.css">
+
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="https://angular.fun" class="site-title">Angular Fun</a>
+      <nav class="site-nav right">
+      <a href="https://angular.fun/events/">Events</a>
+
+<a href="https://angular.fun/tags/">Tags</a>
+
+</form>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Как писать на HTML Canvas удобно, или как изобрести очередной renderer на Angular.</h1>
+        <span class="post-meta">Oct 1, 2021 by
+          <a href="https://twitter.com/irustm">Rustam </a>
+        </span><br>
+        
+      </div>
+
+      <article class="post-content">
+        <p>Разработка на canvas с контекстом 2D обычно не предполагает никаких сложностей. Для начала необходимо изучить пару десятков встроенных методов <a href="https://developer.mozilla.org/ru/docs/Web/API/CanvasRenderingContext2D">WEB API CanvasRenderingContext2D</a>, прочитать <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas">рекомендации по оптимизации</a> , вспомнить школьный курс геометрии. И на этих базовых вещах можно уже строить неплохие приложения на canvas.</p>
+<p>Как один из вариантов начала разработки на canvas: из примитивов фигур строят элементы, затем их объединяют в функцию, эти функции складывают в готовый элемент,  объединяют их в слой, ну и в конце уже отдают в функцию рендера. Все еще звучит довольно неплохо и с этим можно даже жить, если использовать чистые функции, и придерживаться везде этого подхода. Но не всегда этого удается, всегда есть соблазн выхватить что-либо из контекста. Для примера приведу <a href="https://github.com/evanw/source-map-visualization/blob/gh-pages/code.js">код</a> из source-map-vizualization <a href="https://evanw.github.io/source-map-visualization/">https://evanw.github.io/source-map-visualization/</a> замечательный инструмент, сделанный на canvas. Только чтобы понять весь код и привнести какие либо исправления, я думаю придется посидеть не один час.</p>
+<p>Типичный проект на canvas+Angular может выглядеть так, как описано в статье: <a href="https://medium.com/angular-in-depth/how-to-get-started-with-canvas-animations-in-angular-2f797257e5b4">How to get started with Canvas animations in Angular</a>. Достаточно хорошо, если вам необходимо рисовать мало элементов:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Component</span>, <span style="color:#a6e22e">ViewChild</span>, <span style="color:#a6e22e">ElementRef</span>, <span style="color:#a6e22e">OnInit</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@angular/core&#39;</span>;
+
+<span style="color:#66d9ef">@Component</span>({
+  <span style="color:#a6e22e">selector</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;app-root&#39;</span>,
+  <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">    &lt;canvas #canvas width=&#34;600&#34; height=&#34;300&#34;&gt;&lt;/canvas&gt;
+</span><span style="color:#e6db74">    &lt;button (click)=&#34;animate()&#34;&gt;Play&lt;/button&gt;   
+</span><span style="color:#e6db74">  `</span>,
+})
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppComponent</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">OnInit</span> {
+  <span style="color:#66d9ef">@ViewChild</span>(<span style="color:#e6db74">&#39;canvas&#39;</span>, { <span style="color:#66d9ef">static</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> })
+  <span style="color:#a6e22e">canvas</span>: <span style="color:#66d9ef">ElementRef</span>&lt;<span style="color:#f92672">HTMLCanvasElement</span>&gt;;  
+  
+  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">ctx</span>: <span style="color:#66d9ef">CanvasRenderingContext2D</span>;
+
+  <span style="color:#a6e22e">ngOnInit</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">ctx</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">nativeElement</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+  }
+  
+  <span style="color:#a6e22e">animate</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#75715e">// draw function
+</span><span style="color:#75715e"></span>  }
+}
+</code></pre></div><p>Постепенно такой код всегда стремится к большей степени не поддерживаемости. Так случилось и у меня, как я пришел на проект, где повсюду использовался canvas + Angular, к тому уже с большим легаси на тот момент. Само собой скорость разработки уменьшилась, все нужно было глобально рефакторить. После недолгого погружения в проект сформировались требования для рефакторинга.</p>
+<hr>
+<h3 id="требования-для-удобного-использования-html-canvas">Требования для удобного использования HTML Canvas</h3>
+<ul>
+<li>Чистые функции</li>
+<li>Поддержка использования обобщенного кода функции</li>
+<li>Возможность использовать старый код в новом подходе</li>
+<li>Поддержка перерисовки в одном canvas context</li>
+<li>Поддержка анимации</li>
+<li>Поддержка listeners для элементов рисования</li>
+<li>Поддержка инфраструктуры Angular, (Input, Output, OnInit, OnDestroy )</li>
+</ul>
+<p>Так как уже был опыт создания custom renderer для Angular: Статья <a href="https://habr.com/ru/post/480396/">Делаем кроссплатформенное нативное десктоп приложение на Angular</a>, было решено что делаю очередную реализацию Angular renderer.
+Из существующих решений Angular Canvas renderer в open source, большинство выглядело простым экспериментом, и не было упоминаний что где-то на проде его юзают. К тому же эти решения подменяют полностью DefaultDomRenderer, а хотелось использовать Canvas Renderer только для определенных компонентов, дабы не сломать своим рендерером остальной функционал приложения.
+В этой статье не буду рассказывать как создавать свои renderer под Angular, выше в статье уже описывал процесс создания.</p>
+<h3 id="вышел-angularcanvasrenderer">Вышел: AngularCanvasRenderer,</h3>
+<p>Для того чтобы использовать этот рендерер только в нужных для нас местах, необходимо отметить компонент через декоратор <strong>@CanvasComponent.</strong> В свою, очередь этот декоратор унесет метаинфу по компоненту в мапу, и рендерер будет понимать какой все-таки использовать renderer при выполнения инструкции из шаблона.</p>
+<p><strong>Component:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#66d9ef">@CanvasComponent</span>
+<span style="color:#66d9ef">@Component</span>({
+  <span style="color:#a6e22e">selector</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;app-graph-canvas-example&#39;</span>,
+  <span style="color:#a6e22e">templateUrl</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./graph-canvas-example.component.html&#39;</span>,
+  <span style="color:#a6e22e">styleUrls</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;./graph-canvas-example.component.scss&#39;</span>],
+})
+</code></pre></div><p><strong>Template:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;p&gt;</span>Graph example<span style="color:#f92672">&lt;/p&gt;</span>
+
+<span style="color:#f92672">&lt;canvas</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;first&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;rect</span> <span style="color:#960050;background-color:#1e0010">[x]=&#34;mouseX&#34;</span> <span style="color:#960050;background-color:#1e0010">[y]=&#34;20&#34;</span> <span style="color:#a6e22e">w=</span><span style="color:#e6db74">&#34;20&#34;</span> <span style="color:#a6e22e">h=</span><span style="color:#e6db74">&#34;20&#34;</span><span style="color:#f92672">&gt;&lt;/rect&gt;</span>
+  <span style="color:#f92672">&lt;line</span> <span style="color:#960050;background-color:#1e0010">*</span><span style="color:#a6e22e">ngFor=</span><span style="color:#e6db74">&#34;...&#34;</span> <span style="color:#960050;background-color:#1e0010">[x1]=&#34;10&#34;</span> <span style="color:#960050;background-color:#1e0010">[x2]=&#34;100&#34;</span> <span style="color:#960050;background-color:#1e0010">[y1]=&#34;10&#34;</span> <span style="color:#960050;background-color:#1e0010">[y2]=&#34;200&#34;</span><span style="color:#f92672">&gt;&lt;/line&gt;</span>
+<span style="color:#f92672">&lt;/canvas&gt;</span>
+<span style="color:#f92672">&lt;canvas&gt;</span>
+  <span style="color:#f92672">&lt;graph-line</span>
+    <span style="color:#960050;background-color:#1e0010">[data]=&#34;data&#34;</span>
+    <span style="color:#960050;background-color:#1e0010">[step]=&#34;step&#34;</span>
+    <span style="color:#960050;background-color:#1e0010">[deltaX]=&#34;deltaX&#34;</span>
+    <span style="color:#a6e22e">strokeStyle=</span><span style="color:#e6db74">&#34;orange&#34;</span>
+  <span style="color:#f92672">&gt;&lt;/graph-line&gt;</span>
+  <span style="color:#f92672">&lt;graph-line</span> <span style="color:#960050;background-color:#1e0010">[data]=&#34;data3&#34;</span> <span style="color:#960050;background-color:#1e0010">[deltaX]=&#34;deltaX&#34;</span> <span style="color:#a6e22e">strokeStyle=</span><span style="color:#e6db74">&#34;blue&#34;</span><span style="color:#f92672">&gt;&lt;/graph-line&gt;</span>
+<span style="color:#f92672">&lt;/canvas&gt;</span>
+</code></pre></div><p>Для поддержки &ldquo;компонентного&rdquo; подхода внутри canvas, и внедрение чистых функции в шаблонах, как в примере выше, были придуманы так называемые <strong>CanvasElement,</strong> которые поддерживают <strong>selector</strong> внутри canvas элемента.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">CanvasElement</span>, <span style="color:#a6e22e">NgCanvasElement</span>, <span style="color:#a6e22e">NgCanvas</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;angular-canvas&#39;</span>;
+
+<span style="color:#66d9ef">@CanvasElement</span>({
+  <span style="color:#a6e22e">selector</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;graph-line&#39;</span>
+})
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GraphLineElement</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">NgCanvasElement</span> {
+    <span style="color:#75715e">// parent element
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">parent</span>: <span style="color:#66d9ef">NgCanvas</span>;
+
+    <span style="color:#75715e">// canvas element redraw until all NgCanvasElement needDraw as true
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">needDraw</span>: <span style="color:#66d9ef">boolean</span>;
+
+    <span style="color:#a6e22e">setNgProperty</span>(<span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">value</span>: <span style="color:#66d9ef">any</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+      <span style="color:#66d9ef">this</span>[<span style="color:#a6e22e">name</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>;
+
+      <span style="color:#75715e">// redraw all element in one canvas context after set ng property
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">parent</span>.<span style="color:#a6e22e">drawAll</span>();
+    }
+
+    <span style="color:#a6e22e">draw</span>(<span style="color:#a6e22e">context</span>: <span style="color:#66d9ef">CanvasRenderingContext2D</span>, <span style="color:#a6e22e">time</span>: <span style="color:#66d9ef">number</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+      <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span>;
+      <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>    }
+}
+</code></pre></div><p><strong>CanvasElement</strong> должен реализовать интерфейс <strong>NgCanvasElement.</strong> По большей части интерфейс состоит из методов, которые напрямую выполняются из renderer. Например, можно придумать систему стилей для canvas элементов и изменять их через метод <code>setStyle?(style: string, value: any, flags?: RendererStyleFlags2): void;</code>
+и <code>&lt;graph-line style=&quot;color: green&quot;&gt;</code></p>
+<p>но на практике не используется.</p>
+<p><strong>parent: NgCanvas;</strong></p>
+<p>Родительский элемент в котором регистрируются дочерние элементы</p>
+<p><strong>needDraw: boolean;</strong></p>
+<p>Атрибут который отвечает за продолжения цикла рисования, используется при анимациях.</p>
+<p><strong>setNgProperty(name: string, value: any): void</strong></p>
+<p>Метод при котором значения попадают через Input шаблона при changeDetection.
+<em>parent.drawAll()</em> в этом случае вызывает перерисовку всех элементов в текущем canvas слое.</p>
+<p><strong>draw(context: CanvasRenderingContext2D, time: number)</strong></p>
+<p>Метод в котором ведется отрисовка canvas примитив.</p>
+<p><strong>Output event</strong></p>
+<p>Для организации Output необходимо реализовать интерфейс рендерера addEventListener.</p>
+<p>Пример реализации hover на элемент:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">canvas</span>&gt;
+    &lt;<span style="color:#f92672">triangle</span>
+      <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">x</span><span style="color:#960050;background-color:#1e0010">]=&#34;</span><span style="color:#a6e22e">mouseX</span><span style="color:#960050;background-color:#1e0010">&#34;</span>
+      <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">y</span><span style="color:#960050;background-color:#1e0010">]=&#34;</span><span style="color:#a6e22e">mouseY</span><span style="color:#960050;background-color:#1e0010">&#34;</span>
+      <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">hover</span><span style="color:#960050;background-color:#1e0010">)=&#34;</span><span style="color:#a6e22e">hover</span><span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">event</span><span style="color:#960050;background-color:#1e0010">)&#34;</span>
+    &gt;&lt;/<span style="color:#f92672">triangle</span>&gt;
+&lt;/<span style="color:#f92672">canvas</span>&gt;
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx"><span style="color:#66d9ef">private</span> <span style="color:#a6e22e">callbackFunc</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">hover</span><span style="color:#f92672">?:</span> () <span style="color:#f92672">=&gt;</span> {};
+  } <span style="color:#f92672">=</span> {};
+
+<span style="color:#a6e22e">addEventListener</span>(<span style="color:#a6e22e">eventName</span>: <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">callbackFunc</span>) {
+   <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">callbackFunc</span>[<span style="color:#a6e22e">eventName</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">callbackFunc</span>;
+}
+</code></pre></div><p>Проверку принадлежности координат мыши в элемент необходимо реализовывать самому, вспомнив курс геометрии. Благо легко входишь во вкус.</p>
+<p>Полный пример: <a href="https://github.com/irustm/angular-canvas/blob/master/src/app/demos/elements/triangle.element.ts">https://github.com/irustm/angular-canvas/blob/master/src/app/demos/elements/triangle.element.ts</a></p>
+<p>Еще больше методов в readme проекта: <a href="https://github.com/irustm/angular-canvas">https://github.com/irustm/angular-canvas</a></p>
+<hr>
+<h3 id="ngcanvas">NgCanvas</h3>
+<p>В схеме ниже описан механизм работы Angular Canvas Renderer:</p>
+<p><img src="%D0%9A%D0%B0%D0%BA%20%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D0%BD%D0%B0%20HTML%20Canvas%20%D1%83%D0%B4%D0%BE%D0%B1%D0%BD%D0%BE,%20%D0%B8%D0%BB%D0%B8%20%D0%BA%D0%B0%D0%BA%20%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B5%D1%81%D1%82%209b8d4fe1e2894b5ebae629a86c1236fb/Untitled%201.png" alt="Untitled"></p>
+<p>Где в CanvasComponent:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tsx" data-lang="tsx">&lt;<span style="color:#f92672">canvas</span>&gt;   <span style="color:#a6e22e">NgCanvas</span>
+   &lt;<span style="color:#f92672">canvas</span><span style="color:#960050;background-color:#1e0010">-</span><span style="color:#a6e22e">element</span>&gt;<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/canvas-element&gt;   CanvasElement</span>
+</code></pre></div><h3 id="последствия">Последствия</h3>
+<p><strong>AngularMaterial</strong></p>
+<p>В Angular Material сильно используется Angular Animation, и так как BrowserAnimationModule заменяет дефолтный рендерер, начинаются конфликты.</p>
+<p>Первым простым решением было подрубить NoopAnimationModule, и отказаться от плавной анимации AngularMaterial, что выглядело вполне интересно. Но конечно же в Angular предусмотрели и этот случай (но не публичный API, не думаю что кому то еще в голову это пришло): Можно подменить родительский <strong>DomRenderer</strong> своим же (благо интерфейсы совпадают) на моменте создания через <strong>AnimationRendererFactory</strong></p>
+<p><strong>WebGL, WebGPU</strong></p>
+<p>Сейчас модель использования, зашита для использования контекста только под 2d, ничего не ограничивает сделать в NgCanvas <code>canvas.getContext(&quot;webgpu&quot;);</code> и это тоже будет работать.</p>
+<p><strong>NodeGUI (Qt), NativeScript</strong></p>
+<p>Так как эти решения таким же образом подменяют рендерер, нет ничего простого занести в них еще один. В принципе любой рендерер поддерживается, главное чтобы исполняемый хост имел возможность работать с Canvas.</p>
+<p><strong>Год в проде</strong></p>
+<p>Изначально эксперимент являлся лишь моим pet project, который я делал в свободное от работы время. Для демонстрации возможностей была создана простейшая игра и обычные графики. Эта попытка доказать что подобные рендереры облегчают жизнь вскоре была взята на вооружение и уже год как работают в проде.</p>
+<p>Теперь большинство сложных интерфейсов разрабатываются только на нем. Элементы ввода рисуются в обычном DOM, так как CanvasComponent это не только про CanvasRenderer, но и про поддержку DefaultDomRenderer в нем же.</p>
+<p>angular-canvas <a href="https://bundlephobia.com/package/angular-canvas@0.3.0">3,4 кб</a></p>
+<p>Ссылки:</p>
+<p>Github: <a href="https://github.com/irustm/angular-canvas">https://github.com/irustm/angular-canvas</a>
+Демка игры из превью: <a href="https://irustm.github.io/angular-canvas/#/game">Game</a>
+Демка графики: <a href="https://irustm.github.io/angular-canvas/#/demo">Graph</a></p>
+      </article>
+
+      <p class="post-meta">Tags:&nbsp;
+        
+        
+        <a href="https://angular.fun/tags/blog">blog</a>
+        
+        ,&nbsp;
+        <a href="https://angular.fun/tags/canvas">canvas</a>
+        
+        ,&nbsp;
+        <a href="https://angular.fun/tags/angular%20canvas">angular canvas</a>
+        
+      </p>
+
+      
+
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+      <nav class="social-icons icons">
+    <a class="fa fa-rss rss" href="/index.xml"></a>
+    <a class="fa fa-twitter twitter" href="https://twitter.com/angular_fun"></a>
+    <a class="fa fa-github github" target="_blank" href="https://github.com/AngularFun/angular.fun"></a>
+</nav>
+          <small>
+            Copyright &#169; 2021<br>
+          </small>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-155942506-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>

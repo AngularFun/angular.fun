@@ -6,7 +6,17 @@
     <language>en-us</language>
     
     
-    <updated>Sun, 19 Sep 2021 00:00:00 UTC</updated>
+    <updated>Fri, 01 Oct 2021 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Как писать на HTML Canvas удобно, или как изобрести очередной renderer на Angular.</title>
+      <link>https://angular.fun/post/2021-10-01-angular-canvas/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://angular.fun/post/2021-10-01-angular-canvas/</guid>
+      <description>&lt;p&gt;Разработка на canvas с контекстом 2D обычно не предполагает никаких сложностей. Для начала необходимо изучить пару десятков встроенных методов &lt;a href=&#34;https://developer.mozilla.org/ru/docs/Web/API/CanvasRenderingContext2D&#34;&gt;WEB API CanvasRenderingContext2D&lt;/a&gt;, прочитать &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas&#34;&gt;рекомендации по оптимизации&lt;/a&gt; , вспомнить школьный курс геометрии. И на этих базовых вещах можно уже строить неплохие приложения на canvas.&lt;/p&gt;
+&lt;p&gt;Как один из вариантов начала разработки на canvas: из примитивов фигур строят элементы, затем их объединяют в функцию, эти функции складывают в готовый элемент,  объединяют их в слой, ну и в конце уже отдают в функцию рендера. Все еще звучит довольно неплохо и с этим можно даже жить, если использовать чистые функции, и придерживаться везде этого подхода. Но не всегда этого удается, всегда есть соблазн выхватить что-либо из контекста. Для примера приведу &lt;a href=&#34;https://github.com/evanw/source-map-visualization/blob/gh-pages/code.js&#34;&gt;код&lt;/a&gt; из source-map-vizualization &lt;a href=&#34;https://evanw.github.io/source-map-visualization/&#34;&gt;https://evanw.github.io/source-map-visualization/&lt;/a&gt; замечательный инструмент, сделанный на canvas. Только чтобы понять весь код и привнести какие либо исправления, я думаю придется посидеть не один час.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Improve Angular templates</title>
@@ -134,15 +144,6 @@
       
       <guid>https://angular.fun/post/2020-08-06-angular-roadmap/</guid>
       <description>&lt;p&gt;На страницах angular.io появилась страница с roadmap (&lt;a href=&#34;https://angular.io/guide/roadmap&#34;&gt;https://angular.io/guide/roadmap&lt;/a&gt;)&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Make Angular faster</title>
-      <link>https://angular.fun/post/2020-07-22-make-angular-faster/</link>
-      <pubDate>Wed, 22 Jul 2020 00:00:00 UTC</pubDate>
-      
-      <guid>https://angular.fun/post/2020-07-22-make-angular-faster/</guid>
-      <description>&lt;p&gt;Nrwl представила утилиту которая позволит пересобирать проект быстрее. Суть в том что билды складываются в кэш. Бесплатно для использования в локалке, и так же есть возможность закидывать в cloud чтобы шарить билды между командой. (5часов сборки в месяц бесплатно).&lt;/p&gt;</description>
     </item>
     
   </channel>
